@@ -1,0 +1,28 @@
+<!--
+@module:   projects
+@scss:     ./source/css/module/projects.scss
+@js:       ./source/js/module/projects/projects.js
+-->
+
+<div class="projects section">
+    <div class="projectsCarousel">
+
+        {{#each projects}}
+            <div class="project">
+                <div class="{{projectLightbox ? 'lightboxProject' : 'noLightboxProject'}}" on-click="projectClick">
+
+                    <h2>{{name}}</h2>
+                    <p>{{location}}</p>
+
+                    <div class="projectLightBox">
+                        {{#each images}}
+                            <div class="image">{{this}}</div>
+                        {{/each}}
+                        <div class="">POP UP</div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+
+    </div>
+</div>

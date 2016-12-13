@@ -1,0 +1,17 @@
+<!--
+  @module:   nav
+  @scss:     ./source/css/module/nav.scss
+  @js:       ./source/js/module/nav/nav.js
+-->
+
+<div class="nav" >
+  <div>logo</div>
+
+  <ul id="'navMenu'">
+      {{#each nav}}
+      <li data-menuanchor="{{dataAnchor}}">
+          <a href="#{{dataAnchor}}" class="active">{{navItem}}</a>
+      </li>
+      {{/each}}
+  </ul>
+</div>

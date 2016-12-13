@@ -1,0 +1,60 @@
+/**
+ * @module:   projects
+ * @js:       ./source/js/module/projects/projects.js
+ * @html:     ./source/js/module/projects/projects.html
+ */
+
+
+@include module("projects") {
+
+
+    .project{
+        height: 50vh;
+        background-color: red;
+        border: 1px solid grey;
+    }
+
+    .projectLightBox{
+        opacity: 0;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        top: 0;
+        left: 0;
+        transition: all 1s ease-in;
+    }
+
+    .noPopupProject{
+        height: 100%;
+    }
+
+    .popupProject{
+        height: 100%;
+        .projectLightBox{
+            display: block;
+            opacity: 1;
+        }
+    }
+
+    .slick-next{
+        right: 25px;
+        // color: black;
+
+        // &:before{
+        //     content: "next"
+        // }
+    }
+
+    .slick-prev{
+        left: 25px;
+        z-index: 2;
+        // color: black;
+
+        // &:after{
+        //     content: "prev"
+        // }
+    }
+
+
+}
