@@ -4,6 +4,15 @@
   @js:       ./source/js/module/offer/offer.js
 -->
 
-<div class="offer section" data-anchor="offer">
-  <h1>What we offer</h1>
+<div class="offer section container-fluid" data-anchor="offer">
+  <h2 class="section-heading">What we offer</h2>
+  <div class="row">
+      {{#each offer}}
+      <div class="offer-item col-sm-4">
+          <img class="icon" src="{{icon}}">
+          <div class="offer-title">{{offerTitle}}</div>
+          <div class="offer-description">{{offerDescription}}</div>
+      </div>
+      {{/each}}
+  </div>
 </div>

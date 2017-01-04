@@ -8,3 +8,32 @@ $inuit-base-font-size        : $font-size;
 $inuit-base-line-height      : $font-line-height;
 $inuit-base-text-color       : $color-foreground;
 $inuit-base-background-color : $color-background;
+
+
+.sections-container{
+    height: 100%;
+}
+
+.section{
+    height: 100%;
+}
+
+.section-heading{
+    font-size: 32px;
+    letter-spacing: 6px;
+    padding: 50px 20px 20px;
+    text-transform: uppercase;
+    text-align: center;
+
+    &--teal{
+        color: $teal;
+    }
+}
+
+.dash{
+    height: 5px;
+    background-color: $gold;
+    border: $teal;
+    width: 20%;
+    margin: 10px auto 20px;
+}

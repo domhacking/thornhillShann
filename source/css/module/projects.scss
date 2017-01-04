@@ -7,11 +7,74 @@
 
 @include module("projects") {
 
+    background-color: $teal;
+    color: $teal;
+    height: auto;
+
+    .slick-slider{
+        margin-bottom: 0;
+    }
+
+    .section-heading{
+        padding-top: 20px;
+        color: $white;
+    }
 
     .project{
-        height: 50vh;
-        background-color: red;
+        height: 33vw;
         border: 1px solid grey;
+        padding: 20px;
+        transition: all 1s ease;
+        overflow: hidden;
+        background-size: 100%;
+        // background-position: center;
+
+        &--chelsea{
+            background-image: url('../img/project-bg-chelsea.jpg');
+
+        }
+
+        &--kensington{
+            background-image: url('../img/project-bg-kensington.jpg');
+
+        }
+
+        &--fulham{
+            background-image: url('../img/project-bg-fulham.jpg');
+        }
+
+        &:hover{
+            background-size: 105%;
+
+            .project-content-wrapper{
+                transition: background-color 0.3s ease;
+                background-color: rgba(255,255,255, 0.6);
+            }
+        }
+
+    }
+
+    .project-content-wrapper{
+        height: 100%;
+        width: 100%;
+        display: table;
+        transition: background-color 0.3s ease;
+    }
+
+    .project-content-container{
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .project__name{
+        font-size: 24px;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+    }
+
+    .project__location{
+        font-style: italic;
     }
 
     .projectLightBox{

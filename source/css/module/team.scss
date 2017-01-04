@@ -5,6 +5,47 @@
  */
 
 
-@include module("team") { 
-  // :)
+@include module("team") {
+    color: $teal;
+    height: auto;
+
+    .team-member-container{
+        padding-bottom: 80px;
+    }
+
+    .team-member{
+        text-align: center;
+    }
+
+    .image{
+        margin: 0 auto;
+        width: 10vw;
+        height: 10vw;
+        background: #e7e7e7;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-bottom: 20px;
+    }
+
+    .name{
+        font-weight: bold;
+    }
+
+    .position{
+        font-style: italic;
+    }
+
+    .dash{
+        height: 5px;
+        background-color: $gold;
+        border: $teal;
+        width: 20%;
+        margin: 10px auto 20px;
+    }
+
+    .description{
+        font-size: 12px;
+        line-height: 1;
+        padding: 0 20px;
+    }
 }

@@ -5,6 +5,57 @@
  */
 
 
-@include module("testimonials") { 
-  // :)
+@include module("testimonials") {
+    // height: auto;
+
+    .section-heading{
+        padding-top: 20px;
+    }
+    .testimonials-row{
+        height: 50%;
+    }
+
+    .testimonials-img{
+        height: 100%;
+        margin: 0;
+        background-image: url('../img/bg-kitchen.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .testimonials-text-wrapper{
+        background-color: $light-teal;
+        height: 100%;
+        text-align: center;
+        position: relative;
+        padding: 30px;
+
+        &:hover{
+            .testimonials-text-container{
+                border: solid 3px $white;
+            }
+        }
+    }
+
+    .testimonials-text-container{
+        position: relative;
+        height: 100%;
+    }
+
+    .testimonials-text-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .testimonials-title{
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+
+    .testimonials-quote{
+        font-style: italic;
+        line-height: 2;
+    }
 }

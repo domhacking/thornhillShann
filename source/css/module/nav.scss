@@ -7,4 +7,46 @@
 
 @include module("nav") {
     z-index: 2;
+    position: fixed;
+    background-color: $teal;
+    border: none;
+    width: 100%;
+
+    .logo{
+        background: url('../img/nav-logo--white.png');
+        display: inline-block;
+        width: auto;
+        height: 85px;
+        // width: auto;
+        z-index: 5;
+
+        img{
+            height: 100%;
+            width: auto;
+        }
+        // visibility: hidden;
+    }
+
+    .nav-item-container{
+        margin-bottom: 0;
+        float: right
+    }
+
+    .nav-item{
+        font-family: $font-primary;
+        display: inline-block;
+        list-style: none;
+        padding: 35px 23px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        &:last-child{
+            padding-right: 46px;
+        }
+    }
 }

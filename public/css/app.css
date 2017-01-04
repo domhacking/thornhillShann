@@ -5732,6 +5732,28 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+.sections-container {
+  height: 100%; }
+
+.section {
+  height: 100%; }
+
+.section-heading {
+  font-size: 32px;
+  letter-spacing: 6px;
+  padding: 50px 20px 20px;
+  text-transform: uppercase;
+  text-align: center; }
+  .section-heading--teal {
+    color: #4A606D; }
+
+.dash {
+  height: 5px;
+  background-color: #D1B849;
+  border: #4A606D;
+  width: 20%;
+  margin: 10px auto 20px; }
+
 /*!
  * inuitcss, by @csswizardry
  *
@@ -6290,7 +6312,21 @@ li > ol {
 
 html, body {
   width: 100%;
-  min-height: 100%; }
+  height: 100%;
+  color: #fff;
+  font-size: 16px; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0; }
+
+.main {
+  height: 100%; }
 
 /* Slider */
 .slick-slider {
@@ -6378,14 +6414,6 @@ html, body {
 /* Slider */
 .slick-loading .slick-list {
   background: #fff url("./ajax-loader.gif") center center no-repeat; }
-
-/* Icons */
-@font-face {
-  font-family: 'slick';
-  font-weight: normal;
-  font-style: normal;
-  src: url("./fonts/slick.eot");
-  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg"); }
 
 /* Arrows */
 .slick-prev,
@@ -6670,75 +6698,285 @@ html, body {
  * @js:       ./source/js/module/about/about.js
  * @html:     ./source/js/module/about/about.html
  */
+.about {
+  text-align: center;
+  height: auto; }
+  .about .wrapper--about {
+    background-color: #4A606D; }
+  .about .content-container--about {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 25px 80px; }
+  .about .parallax--about {
+    background-image: url("../img/bg-image.jpg");
+    background-position: 0 0;
+    background-size: cover;
+    height: 500px; }
+
 /**
  * @module:   footer
  * @js:       ./source/js/module/footer/footer.js
  * @html:     ./source/js/module/footer/footer.html
  */
+.footer {
+  height: auto;
+  background-color: #4A606D; }
+  .footer .footer-logo-container {
+    height: 300px;
+    padding: 50px; }
+    .footer .footer-logo-container .logo {
+      height: 100%;
+      width: 100%;
+      background: url("../img/ts-logo--white.png");
+      background-size: contain;
+      background-repeat: no-repeat; }
+  .footer .contact-details-container {
+    margin: 50px 50px 20px;
+    float: right; }
+    .footer .contact-details-container p {
+      line-height: 1.7; }
+  .footer .contact-links {
+    display: block;
+    color: #fff; }
+    .footer .contact-links:hover {
+      text-decoration: underline; }
+
 /**
  * @module:   home
  * @js:       ./source/js/module/home/home.js
  * @html:     ./source/js/module/home/home.html
  */
+.home {
+  background-image: url("../img/bg-image.jpg");
+  background-size: cover;
+  background-position: center; }
+  .home .logo {
+    text-indent: 150%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-image: url("../img/ts-logo--white.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 30%;
+    width: auto;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+
 /**
  * @module:   nav
  * @js:       ./source/js/module/nav/nav.js
  * @html:     ./source/js/module/nav/nav.html
  */
 .nav {
-  z-index: 2; }
+  z-index: 2;
+  position: fixed;
+  background-color: #4A606D;
+  border: none;
+  width: 100%; }
+  .nav .logo {
+    background: url("../img/nav-logo--white.png");
+    display: inline-block;
+    width: auto;
+    height: 85px;
+    z-index: 5; }
+    .nav .logo img {
+      height: 100%;
+      width: auto; }
+  .nav .nav-item-container {
+    margin-bottom: 0;
+    float: right; }
+  .nav .nav-item {
+    font-family: "Myriad Pro", serif;
+    display: inline-block;
+    list-style: none;
+    padding: 35px 23px;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+    .nav .nav-item a {
+      text-decoration: none;
+      color: #fff; }
+    .nav .nav-item:last-child {
+      padding-right: 46px; }
 
 /**
  * @module:   offer
  * @js:       ./source/js/module/offer/offer.js
  * @html:     ./source/js/module/offer/offer.html
  */
+.offer {
+  background-color: #4A606D;
+  text-align: center;
+  height: auto;
+  padding-bottom: 80px; }
+  .offer .offer-item {
+    padding: 0 20px;
+    margin: 30px 0; }
+  .offer .icon {
+    width: 12%;
+    margin-bottom: 20px; }
+  .offer .offer-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px; }
+  .offer .offer-description {
+    font-size: 13px; }
+
 /**
  * @module:   projects
  * @js:       ./source/js/module/projects/projects.js
  * @html:     ./source/js/module/projects/projects.html
  */
-.projects .project {
-  height: 50vh;
-  background-color: red;
-  border: 1px solid grey; }
-
-.projects .projectLightBox {
-  opacity: 0;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  top: 0;
-  left: 0;
-  transition: all 1s ease-in; }
-
-.projects .noPopupProject {
-  height: 100%; }
-
-.projects .popupProject {
-  height: 100%; }
-  .projects .popupProject .projectLightBox {
-    display: block;
-    opacity: 1; }
-
-.projects .slick-next {
-  right: 25px; }
-
-.projects .slick-prev {
-  left: 25px;
-  z-index: 2; }
+.projects {
+  background-color: #4A606D;
+  color: #4A606D;
+  height: auto; }
+  .projects .slick-slider {
+    margin-bottom: 0; }
+  .projects .section-heading {
+    padding-top: 20px;
+    color: #fff; }
+  .projects .project {
+    height: 33vw;
+    border: 1px solid grey;
+    padding: 20px;
+    transition: all 1s ease;
+    overflow: hidden;
+    background-size: 100%; }
+    .projects .project--chelsea {
+      background-image: url("../img/project-bg-chelsea.jpg"); }
+    .projects .project--kensington {
+      background-image: url("../img/project-bg-kensington.jpg"); }
+    .projects .project--fulham {
+      background-image: url("../img/project-bg-fulham.jpg"); }
+    .projects .project:hover {
+      background-size: 105%; }
+      .projects .project:hover .project-content-wrapper {
+        transition: background-color 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.6); }
+  .projects .project-content-wrapper {
+    height: 100%;
+    width: 100%;
+    display: table;
+    transition: background-color 0.3s ease; }
+  .projects .project-content-container {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle; }
+  .projects .project__name {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 6px; }
+  .projects .project__location {
+    font-style: italic; }
+  .projects .projectLightBox {
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    top: 0;
+    left: 0;
+    transition: all 1s ease-in; }
+  .projects .noPopupProject {
+    height: 100%; }
+  .projects .popupProject {
+    height: 100%; }
+    .projects .popupProject .projectLightBox {
+      display: block;
+      opacity: 1; }
+  .projects .slick-next {
+    right: 25px; }
+  .projects .slick-prev {
+    left: 25px;
+    z-index: 2; }
 
 /**
  * @module:   team
  * @js:       ./source/js/module/team/team.js
  * @html:     ./source/js/module/team/team.html
  */
+.team {
+  color: #4A606D;
+  height: auto; }
+  .team .team-member-container {
+    padding-bottom: 80px; }
+  .team .team-member {
+    text-align: center; }
+  .team .image {
+    margin: 0 auto;
+    width: 10vw;
+    height: 10vw;
+    background: #e7e7e7;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-bottom: 20px; }
+  .team .name {
+    font-weight: bold; }
+  .team .position {
+    font-style: italic; }
+  .team .dash {
+    height: 5px;
+    background-color: #D1B849;
+    border: #4A606D;
+    width: 20%;
+    margin: 10px auto 20px; }
+  .team .description {
+    font-size: 12px;
+    line-height: 1;
+    padding: 0 20px; }
+
 /**
  * @module:   testimonials
  * @js:       ./source/js/module/testimonials/testimonials.js
  * @html:     ./source/js/module/testimonials/testimonials.html
  */
+.testimonials .section-heading {
+  padding-top: 20px; }
+
+.testimonials .testimonials-row {
+  height: 50%; }
+
+.testimonials .testimonials-img {
+  height: 100%;
+  margin: 0;
+  background-image: url("../img/bg-kitchen.jpg");
+  background-size: cover;
+  background-position: center; }
+
+.testimonials .testimonials-text-wrapper {
+  background-color: #839CAB;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  padding: 30px; }
+  .testimonials .testimonials-text-wrapper:hover .testimonials-text-container {
+    border: solid 3px #fff; }
+
+.testimonials .testimonials-text-container {
+  position: relative;
+  height: 100%; }
+
+.testimonials .testimonials-text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%); }
+
+.testimonials .testimonials-title {
+  font-weight: normal;
+  margin-bottom: 20px; }
+
+.testimonials .testimonials-quote {
+  font-style: italic;
+  line-height: 2; }
+
 /*------------------------------------*    #SPACING
 \*------------------------------------*/
 /**

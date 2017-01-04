@@ -35,7 +35,7 @@ module.exports = Module.extend({
   template: require('./nav.html'),
 
   data: {
-      nav: nav
-  },
+      nav : nav
+  }
 
 });

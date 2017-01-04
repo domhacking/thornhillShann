@@ -5,12 +5,14 @@
 -->
 
 <div class="nav" >
-  <div>logo</div>
+  <div class="logo">
+      <img src="img/nav-logo--white.png" alt="">
+  </div>
 
-  <ul id="'navMenu'">
+  <ul id="navMenu" class="nav-item-container">
       {{#each nav}}
-      <li data-menuanchor="{{dataAnchor}}">
-          <a href="#{{dataAnchor}}" class="active">{{navItem}}</a>
+      <li class="nav-item" data-menuanchor="{{dataAnchor}}">
+          <a href="#{{dataAnchor}}">{{navItem}}</a>
       </li>
       {{/each}}
   </ul>

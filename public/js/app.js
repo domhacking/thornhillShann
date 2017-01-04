@@ -32669,7 +32669,7 @@ return jQuery;
 }));
 
 },{"jquery":4}],7:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"about section","data-anchor":"about"},"f":[{"t":7,"e":"h2","f":["About"]}," ",{"t":7,"e":"ui-team"}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"about section","data-anchor":"about"},"f":[{"t":7,"e":"div","a":{"class":"wrapper--about"},"f":[{"t":7,"e":"div","a":{"class":"content-container--about"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["About Us"]}," ",{"t":7,"e":"p","a":{"class":"text"},"f":["The three most important rules for a successful building contract are Planning, Planning and Planning. Too many builders embark on a building contract with no formal plan or timetable and consequently before too long, the contract starts to drift into a state of semi- disorganised chaos"]}," ",{"t":7,"e":"p","a":{"class":"text"},"f":["Conversely, some contractors have so many layers of supervision that all too often by the time the decision is made it is either too late or it has been made by som-one so far up the chain of command with no detailed knowledge of the contract that the wrong decision is made."]}]}]}," "]}]}
 },{}],8:[function(require,module,exports){
 /**
  * @module:   about
@@ -32682,7 +32682,27 @@ var Module = require('../abstract-module');
 
 module.exports = Module.extend({
 
-  template: require('./about.html')
+  template: require('./about.html'),
+
+  onrender: function() {
+      (function(){
+
+        var parallax = document.querySelectorAll(".parallax"),
+            speed = 0.5;
+
+        window.onscroll = function(){
+          [].slice.call(parallax).forEach(function(el,i){
+
+            var windowYOffset = window.pageYOffset,
+                elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+            el.style.backgroundPosition = elBackgrounPos;
+
+          });
+        };
+
+        })();
+  }
 
 });
 
@@ -32708,7 +32728,7 @@ module.exports = Ractive.extend({
 });
 
 },{"ractive":5}],10:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"footer section","data-anchor":"contact"},"f":[{"t":7,"e":"h2","f":["Footer"]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"footer section container-fluid","data-anchor":"contact"},"f":[{"t":7,"e":"div","a":{"class":"row"},"f":[{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"footer-logo-container"},"f":[{"t":7,"e":"div","a":{"class":"logo"}}]}]}," ",{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"contact-details-container"},"f":[{"t":7,"e":"p","f":["Thornhill Shann Construction Limited"]}," ",{"t":7,"e":"p","f":["61A Greenwood Road, London, E8 1NT"]}," ",{"t":7,"e":"p","f":["Company Number: 10456724"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"mailto:contact@thornhillshann.co.uk"},"f":["contact@thornhillshann.co.uk"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"tel:02036542358"},"f":["0203 654 2358"]}]}]}]}]}]}
 },{}],11:[function(require,module,exports){
 /**
  * @module:   footer
@@ -32726,7 +32746,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":9,"./footer.html":10}],12:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"home section","data-anchor":"home"},"f":[{"t":7,"e":"h2","f":["Home"]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"home section","data-anchor":"home"},"f":[]}]}
 },{}],13:[function(require,module,exports){
 /**
  * @module:   home
@@ -32758,7 +32778,7 @@ Ractive.components['ui-testimonials'] = require('./testimonials/testimonials.js'
 module.exports = Ractive;
 
 },{"./about/about.js":8,"./footer/footer.js":11,"./home/home.js":13,"./nav/nav.js":16,"./offer/offer.js":18,"./projects/projects.js":20,"./team/team.js":22,"./testimonials/testimonials.js":24,"ractive":5}],15:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","f":["logo"]}," ",{"t":7,"e":"ul","a":{"id":"'navMenu'"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"data-menuanchor":[{"t":2,"r":"dataAnchor"}]},"f":[{"t":7,"e":"a","a":{"href":["#",{"t":2,"r":"dataAnchor"}],"class":"active"},"f":[{"t":2,"r":"navItem"}]}]}],"n":52,"r":"nav"}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"logo"},"f":[{"t":7,"e":"img","a":{"src":"img/nav-logo--white.png","alt":""}}]}," ",{"t":7,"e":"ul","a":{"id":"navMenu","class":"nav-item-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"nav-item","data-menuanchor":[{"t":2,"r":"dataAnchor"}]},"f":[{"t":7,"e":"a","a":{"href":["#",{"t":2,"r":"dataAnchor"}]},"f":[{"t":2,"r":"navItem"}]}]}],"n":52,"r":"nav"}]}]}]}
 },{}],16:[function(require,module,exports){
 /**
  * @module:   nav
@@ -32797,13 +32817,13 @@ module.exports = Module.extend({
   template: require('./nav.html'),
 
   data: {
-      nav: nav
-  },
+      nav : nav
+  }
 
 });
 
 },{"../abstract-module":9,"./nav.html":15}],17:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"offer section","data-anchor":"offer"},"f":[{"t":7,"e":"h1","f":["What we offer"]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"offer section container-fluid","data-anchor":"offer"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["What we offer"]}," ",{"t":7,"e":"div","a":{"class":"row"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":"offer-item col-sm-4"},"f":[{"t":7,"e":"img","a":{"class":"icon","src":[{"t":2,"r":"icon"}]}}," ",{"t":7,"e":"div","a":{"class":"offer-title"},"f":[{"t":2,"r":"offerTitle"}]}," ",{"t":7,"e":"div","a":{"class":"offer-description"},"f":[{"t":2,"r":"offerDescription"}]}]}],"n":52,"r":"offer"}]}]}]}
 },{}],18:[function(require,module,exports){
 /**
  * @module:   offer
@@ -32811,17 +32831,54 @@ module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"offer section","data-a
  * @html:     ./source/js/module/offer/offer.html
  */
 
+ offer = [
+     {
+         icon: "../img/people.png",
+         offerTitle: "Project Management",
+         offerDescription: "This is some more description Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"
+     },
+     {
+         icon: "../img/drawing.png",
+         offerTitle: "Project Management",
+         offerDescription: "This is some more description Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"
+     },
+     {
+         icon: "../img/tools-1.png",
+         offerTitle: "Project Management",
+         offerDescription: "This is some more description Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"
+     },
+     {
+         icon: "../img/tools.png",
+         offerTitle: "Project Management",
+         offerDescription: "This is some more description Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"
+     },
+     {
+         icon: "../img/interface.png",
+         offerTitle: "Project Management",
+         offerDescription: "This is some more description Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"
+     },
+     {
+         icon: "../img/tools.png",
+         offerTitle: "Project Management",
+         offerDescription: "This is some more description Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"
+     }
+ ]
+
 
 var Module = require('../abstract-module');
 
 module.exports = Module.extend({
 
-  template: require('./offer.html')
+  template: require('./offer.html'),
+
+  data:{
+      offer : offer
+  }
 
 });
 
 },{"../abstract-module":9,"./offer.html":17}],19:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"projects section"},"f":[{"t":7,"e":"div","a":{"class":"projectsCarousel"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":"project"},"f":[{"t":7,"e":"div","a":{"class":[{"t":2,"x":{"r":["projectLightbox"],"s":"_0?\"lightboxProject\":\"noLightboxProject\""}}]},"v":{"click":"projectClick"},"f":[{"t":7,"e":"h2","f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"p","f":[{"t":2,"r":"location"}]}," ",{"t":7,"e":"div","a":{"class":"projectLightBox"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":"image"},"f":[{"t":2,"r":"."}]}],"n":52,"r":"images"}," ",{"t":7,"e":"div","a":{"class":""},"f":["POP UP"]}]}]}]}],"n":52,"r":"projects"}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"projects section"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["Projects"]}," ",{"t":7,"e":"div","a":{"class":"projectsCarousel"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":["project project--",{"t":2,"r":"name"}," ",{"t":2,"x":{"r":["projectLightbox"],"s":"_0?\"lightboxProject\":\"noLightboxProject\""}}]},"v":{"click":"projectClick"},"f":[{"t":7,"e":"div","a":{"class":"project-content-wrapper"},"f":[{"t":7,"e":"div","a":{"class":"project-content-container"},"f":[{"t":7,"e":"h3","a":{"class":"project__name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"p","a":{"class":"project__location"},"f":[{"t":2,"r":"location"}]}]}]}," "]}],"n":52,"i":"i","r":"projects"}]}]}]}
 },{}],20:[function(require,module,exports){
 /**
 * @module:   projects
@@ -32837,7 +32894,19 @@ slick = require('slick-carousel-browserify');
 projects = [
  	{
         location:"Location",
-        name: "Name",
+        name: "chelsea",
+        imageHero:"../img/bg-sittingRoom.jpg",
+        imageNumber:"1",
+        images: ["../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg"]
+        // images: [{
+        //     image: "some content",
+        //     image: "more secondary content",
+        //     image: "final conent"
+        // }]
+    },
+ 	{
+        location:"Location",
+        name: "kensington",
         imageHero:"../img/mosaic-img1.jpg",
         imageNumber:"1",
         images: ["../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg"]
@@ -32849,7 +32918,7 @@ projects = [
     },
  	{
         location:"Location",
-        name: "Name",
+        name: "fulham",
         imageHero:"../img/mosaic-img1.jpg",
         imageNumber:"1",
         images: ["../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg"]
@@ -32858,43 +32927,31 @@ projects = [
         //     image: "more secondary content",
         //     image: "final conent"
         // }]
-    },
- 	{
-        location:"Location",
-        name: "Name",
-        imageHero:"../img/mosaic-img1.jpg",
-        imageNumber:"1",
-        images: ["../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg"]
-        // images: [{
-        //     image: "some content",
-        //     image: "more secondary content",
-        //     image: "final conent"
-        // }]
-    },
- 	{
-        location:"Location",
-        name: "Name",
-        imageHero:"../img/mosaic-img1.jpg",
-        imageNumber:"1",
-        images: ["../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg"]
-        // images: [{
-        //     image: "some content",
-        //     image: "more secondary content",
-        //     image: "final conent"
-        // }]
-    },
- 	{
-        location:"Location",
-        name: "Name",
-        imageHero:"../img/mosaic-img1.jpg",
-        imageNumber:"1",
-        images: ["../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg"]
-        // images: [{
-        //     image: "some content",
-        //     image: "more secondary content",
-        //     image: "final conent"
-        // }]
-    },
+    }
+ // 	{
+    //     location:"Location",
+    //     name: "Name",
+    //     imageHero:"../img/mosaic-img1.jpg",
+    //     imageNumber:"1",
+    //     images: ["../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg"]
+    //     // images: [{
+    //     //     image: "some content",
+    //     //     image: "more secondary content",
+    //     //     image: "final conent"
+    //     // }]
+    // },
+ // 	{
+    //     location:"Location",
+    //     name: "Name",
+    //     imageHero:"../img/mosaic-img1.jpg",
+    //     imageNumber:"1",
+    //     images: ["../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg", "../img/mosaic-img1.jpg"]
+    //     // images: [{
+    //     //     image: "some content",
+    //     //     image: "more secondary content",
+    //     //     image: "final conent"
+    //     // }]
+    // },
 
  ];
 
@@ -32927,12 +32984,12 @@ module.exports = Module.extend({
     },
 
     oninit: function(){
-        this.on('projectClick', this.onProjectClick);
+        // this.on('projectClick', this.onProjectClick);
     },
 
 
     onProjectClick: function(){
-        console.log('clicked');
+        // console.log('clicked');
         this.set('projectLightbox', true);
     }
 
@@ -32945,7 +33002,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":9,"./projects.html":19,"jquery":4,"slick-carousel-browserify":6}],21:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"team container-fluid"},"f":[{"t":7,"e":"h2","f":["Team"]}," ",{"t":7,"e":"div","a":{"class":"row"},"f":[{"t":7,"e":"div","a":{"class":"team-member col-sm-3"},"f":[{"t":7,"e":"div","a":{"class":"image"}}," ",{"t":7,"e":"div","a":{"class":"name"},"f":["Tommy Shann"]}," ",{"t":7,"e":"div","a":{"class":"position"},"f":["Co-founder"]}," ",{"t":7,"e":"div","a":{"class":"description"},"f":["Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"]}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"team container-fluid section"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["Team"]}," ",{"t":7,"e":"div","a":{"class":"row team-member-container"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":"team-member col-sm-3"},"f":[{"t":7,"e":"div","a":{"class":"image"},"f":[{"t":2,"r":"img"}]}," ",{"t":7,"e":"div","a":{"class":"name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"div","a":{"class":"position"},"f":[{"t":2,"r":"position"}]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"div","a":{"class":"description"},"f":[{"t":2,"r":"description"}]}]}],"n":52,"r":"team"}]}]}]}
 },{}],22:[function(require,module,exports){
 /**
  * @module:   team
@@ -32954,16 +33011,44 @@ module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"team container-fluid"}
  */
 
 
+ team = [
+     {
+         name: "Tommy Shann",
+         position: "Co-Founder",
+         description: "Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"
+     },
+     {
+         name: "Tommy Shann",
+         position: "Co-Founder",
+         description: "Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"
+     },
+     {
+         name: "Tommy Shann",
+         position: "Co-Founder",
+         description: "Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"
+     },
+     {
+         name: "Tommy Shann",
+         position: "Co-Founder",
+         description: "Tommy had been in the business for 50 years and has a huge amount of experience building homes and renovation"
+     }
+ ]
+
+
 var Module = require('../abstract-module');
 
 module.exports = Module.extend({
 
-  template: require('./team.html')
+  template: require('./team.html'),
+
+  data: {
+      team : team
+  }
 
 });
 
 },{"../abstract-module":9,"./team.html":21}],23:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"testimonials section","data-anchor":"testimonials"},"f":[{"t":7,"e":"h2","f":["Testimonials"]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"testimonials section container-fluid","data-anchor":"testimonials"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading section-heading--teal "},"f":["Testimonials"]}," ",{"t":7,"e":"div","a":{"class":"row testimonials-row"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-wrapper col-lg-4 col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-container"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-content"},"f":[{"t":7,"e":"h3","a":{"class":"testimonials-title"},"f":["Suzie from Chelsea"]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"p","a":{"class":"testimonials-quote"},"f":["\"Thornhill Shann did a fantastic job. They delivered it on time, in the budget. Now our home looks lovely\""]}]}]}]}," ",{"t":7,"e":"div","a":{"class":"col-lg-8 col-md-6 testimonials-img"}}]}," ",{"t":7,"e":"div","a":{"class":"row testimonials-row"},"f":[{"t":7,"e":"div","a":{"class":"col-lg-8 col-md-6 testimonials-img"}}," ",{"t":7,"e":"div","a":{"class":"testimonials-text-wrapper col-lg-4 col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-container"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-content"},"f":[{"t":7,"e":"h3","a":{"class":"testimonials-title"},"f":["Suzie from Chelsea"]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"p","a":{"class":"testimonials-quote"},"f":["\"Thornhill Shann did a fantastic job. They delivered it on time, in the budget. Now our home looks lovely\""]}]}]}]}]}]}]}
 },{}],24:[function(require,module,exports){
 /**
  * @module:   testimonials
@@ -32981,7 +33066,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":9,"./testimonials.html":23}],25:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"ui-nav"}," ",{"t":7,"e":"div","a":{"id":"fullpage"},"f":[{"t":7,"e":"ui-home"}," ",{"t":7,"e":"ui-about"}," ",{"t":7,"e":"ui-projects"}," ",{"t":7,"e":"ui-offer"}," ",{"t":7,"e":"ui-testimonials"}," ",{"t":7,"e":"ui-footer"}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"ui-nav"}," ",{"t":7,"e":"div","a":{"id":"","class":"sections-container"},"f":[{"t":7,"e":"ui-home"}," ",{"t":7,"e":"ui-about"}," ",{"t":7,"e":"ui-team"}," ",{"t":7,"e":"ui-projects"}," ",{"t":7,"e":"ui-offer"}," ",{"t":7,"e":"ui-testimonials"}," ",{"t":7,"e":"ui-footer"}]}]}
 },{}],26:[function(require,module,exports){
 var Ractive = require('../module');
 var $ = require('jquery');

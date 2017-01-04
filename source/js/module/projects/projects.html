@@ -5,24 +5,23 @@
 -->
 
 <div class="projects section">
+    <h2 class="section-heading">Projects</h2>
     <div class="projectsCarousel">
-
-        {{#each projects}}
-            <div class="project">
-                <div class="{{projectLightbox ? 'lightboxProject' : 'noLightboxProject'}}" on-click="projectClick">
-
-                    <h2>{{name}}</h2>
-                    <p>{{location}}</p>
-
-                    <div class="projectLightBox">
-                        {{#each images}}
-                            <div class="image">{{this}}</div>
-                        {{/each}}
-                        <div class="">POP UP</div>
+        {{#each projects:i}}
+            <div class="project project--{{name}} {{projectLightbox ? 'lightboxProject' : 'noLightboxProject'}}" on-click="projectClick">
+                <div class="project-content-wrapper">
+                    <div class="project-content-container">
+                        <h3 class="project__name">{{name}}</h3>
+                        <p class="project__location">{{location}}</p>
                     </div>
                 </div>
+                <!-- <div class="projectLightBox">
+                    {{#each images}}
+                    <div class="image">{{this}}</div>
+                    {{/each}}
+                    <div class="">POP UP</div>
+                </div> -->
             </div>
         {{/each}}
-
     </div>
 </div>

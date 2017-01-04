@@ -5,6 +5,30 @@
  */
 
 
-@include module("offer") { 
-  // :)
+@include module("offer") {
+    background-color: $teal;
+    text-align: center;
+    height: auto;
+    padding-bottom: 80px;
+
+    .offer-item{
+        padding: 0 20px;
+        margin: 30px 0;
+    }
+
+    .icon{
+        width: 12%;
+        margin-bottom: 20px;
+    }
+
+    .offer-title{
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .offer-description{
+        font-size: 13px;
+    }
 }

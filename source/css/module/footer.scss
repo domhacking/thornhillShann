@@ -5,6 +5,39 @@
  */
 
 
-@include module("footer") { 
-  // :)
+@include module("footer") {
+      height: auto;
+      background-color: $teal;
+
+      .footer-logo-container{
+          height: 300px;
+          padding: 50px;
+
+        .logo{
+            height: 100%;
+            width: 100%;
+            background: url('../img/ts-logo--white.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+      }
+
+      .contact-details-container{
+          margin: 50px 50px 20px;
+          float: right;
+
+          p{
+              line-height: 1.7;
+          }
+      }
+
+      .contact-links{
+          display: block;
+          color: $white;
+        //   transition: all 0.3s ease;
+
+          &:hover{
+              text-decoration: underline;
+          }
+      }
 }

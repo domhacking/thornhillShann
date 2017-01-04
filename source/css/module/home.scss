@@ -5,6 +5,24 @@
  */
 
 
-@include module("home") { 
-  // :)
+@include module("home") {
+    background-image: url("../img/bg-image.jpg");
+    background-size: cover;
+    background-position: center;
+
+    .logo{
+        text-indent: 150%;
+        overflow: hidden;
+        white-space: nowrap;
+        background-image: url("../img/ts-logo--white.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 30%;
+        width: auto;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
