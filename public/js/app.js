@@ -32778,7 +32778,7 @@ Ractive.components['ui-testimonials'] = require('./testimonials/testimonials.js'
 module.exports = Ractive;
 
 },{"./about/about.js":8,"./footer/footer.js":11,"./home/home.js":13,"./nav/nav.js":16,"./offer/offer.js":18,"./projects/projects.js":20,"./team/team.js":22,"./testimonials/testimonials.js":24,"ractive":5}],15:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"logo"},"f":[{"t":7,"e":"img","a":{"src":"img/nav-logo--white.png","alt":""}}]}," ",{"t":7,"e":"ul","a":{"id":"navMenu","class":"nav-item-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"nav-item","data-menuanchor":[{"t":2,"r":"dataAnchor"}]},"f":[{"t":7,"e":"a","a":{"href":["#",{"t":2,"r":"dataAnchor"}]},"f":[{"t":2,"r":"navItem"}]}]}],"n":52,"r":"nav"}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav nav__scrolled"},"f":[{"t":7,"e":"div","a":{"class":"logo"},"f":[{"t":7,"e":"img","a":{"src":"img/nav-logo--white.png","alt":""}}]}," ",{"t":7,"e":"ul","a":{"id":"navMenu","class":"nav-item-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"nav-item","data-menuanchor":[{"t":2,"r":"dataAnchor"}]},"f":[{"t":7,"e":"a","a":{"href":["#",{"t":2,"r":"dataAnchor"}]},"f":[{"t":2,"r":"navItem"}]}]}],"n":52,"r":"nav"}]}]}]}
 },{}],16:[function(require,module,exports){
 /**
  * @module:   nav
@@ -32812,13 +32812,20 @@ nav = [
 
 var Module = require('../abstract-module');
 
+
 module.exports = Module.extend({
 
   template: require('./nav.html'),
 
   data: {
       nav : nav
-  }
+  },
+
+  onrender: function() {
+
+  },
+
+
 
 });
 
@@ -32970,10 +32977,6 @@ module.exports = Module.extend({
             autoplay: true,
             arrows: true
         });
-
-        // $('.projectCarousel').slick({
-        //
-        // })
     },
 
     data: {
@@ -33066,7 +33069,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":9,"./testimonials.html":23}],25:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"ui-nav"}," ",{"t":7,"e":"div","a":{"id":"","class":"sections-container"},"f":[{"t":7,"e":"ui-home"}," ",{"t":7,"e":"ui-about"}," ",{"t":7,"e":"ui-team"}," ",{"t":7,"e":"ui-projects"}," ",{"t":7,"e":"ui-offer"}," ",{"t":7,"e":"ui-testimonials"}," ",{"t":7,"e":"ui-footer"}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"preload anotherDiv"}}," ",{"t":7,"e":"ui-nav"}," ",{"t":7,"e":"div","a":{"id":"","class":"sections-container"},"f":[{"t":7,"e":"ui-home"}," ",{"t":7,"e":"ui-about"}," ",{"t":7,"e":"ui-team"}," ",{"t":7,"e":"ui-projects"}," ",{"t":7,"e":"ui-offer"}," ",{"t":7,"e":"ui-testimonials"}," ",{"t":7,"e":"ui-footer"}]}]}
 },{}],26:[function(require,module,exports){
 var Ractive = require('../module');
 var $ = require('jquery');
@@ -33089,15 +33092,26 @@ module.exports = function() {
     oninit: function() {
     },
 
+
+
     onrender: function() {
         $('#fullpage').fullpage({
             anchors:['home', 'about', 'projects', 'offer', 'testimonials', 'contact'],
             menu: 'navMenu'
         });
-    }
+
+
+        $(window).on('load', function() {
+            $(".anotherDiv").removeClass("preload", 10000, "easeInBack");
+         });
+
+    },
+
 
 
   });
+
+
 
 };
 

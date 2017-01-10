@@ -30,12 +30,19 @@ nav = [
 
 var Module = require('../abstract-module');
 
+
 module.exports = Module.extend({
 
   template: require('./nav.html'),
 
   data: {
       nav : nav
-  }
+  },
+
+  onrender: function() {
+
+  },
+
+
 
 });

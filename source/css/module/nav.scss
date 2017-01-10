@@ -11,6 +11,7 @@
     background-color: $teal;
     border: none;
     width: 100%;
+    opacity: 0.6;
 
     .logo{
         background: url('../img/nav-logo--white.png');
@@ -48,5 +49,10 @@
         &:last-child{
             padding-right: 46px;
         }
+    }
+
+    &__scrolled{
+        border-bottom: 1px solid $white;
+        opacity: 1;
     }
 }

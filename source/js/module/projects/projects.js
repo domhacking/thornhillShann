@@ -88,10 +88,6 @@ module.exports = Module.extend({
             autoplay: true,
             arrows: true
         });
-
-        // $('.projectCarousel').slick({
-        //
-        // })
     },
 
     data: {
