@@ -12,13 +12,14 @@
     border: none;
     width: 100%;
     opacity: 0.6;
+    transition: opacity 0.3s ease;
 
     .logo{
         background: url('../img/nav-logo--white.png');
         display: inline-block;
         width: auto;
-        height: 85px;
-        // width: auto;
+        height: 65px;
+        width: auto;
         z-index: 5;
 
         img{
@@ -37,7 +38,7 @@
         font-family: $font-primary;
         display: inline-block;
         list-style: none;
-        padding: 35px 23px;
+        padding: 25px 23px 20px;
         text-transform: uppercase;
         letter-spacing: 3px;
 
@@ -54,5 +55,21 @@
     &__scrolled{
         border-bottom: 1px solid $white;
         opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    @media #{$viewport-wide-screen}{
+        &.nav{
+
+        }
+
+        .logo{
+            height: 85px;
+        }
+
+        .nav-item{
+            padding: 35px 23px;
+        }
+
     }
 }

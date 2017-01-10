@@ -4,14 +4,16 @@
   @js:       ./source/js/module/nav/nav.js
 -->
 
-<div class="nav nav__scrolled" >
+<div class="nav">
   <div class="logo">
-      <img src="img/nav-logo--white.png" alt="">
+      <a href="#home">
+          <img src="img/nav-logo--white.png" alt="">
+      </a>
   </div>
 
   <ul id="navMenu" class="nav-item-container">
       {{#each nav}}
-      <li class="nav-item" data-menuanchor="{{dataAnchor}}">
+      <li class="nav-item">
           <a href="#{{dataAnchor}}">{{navItem}}</a>
       </li>
       {{/each}}

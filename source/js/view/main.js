@@ -1,6 +1,6 @@
 var Ractive = require('../module');
 var $ = require('jquery');
-var fullpage = require('fullpage.js');
+// var fullpage = require('fullpage.js');
 
 module.exports = function() {
 
@@ -19,20 +19,16 @@ module.exports = function() {
     oninit: function() {
     },
 
-
-
     onrender: function() {
-        $('#fullpage').fullpage({
-            anchors:['home', 'about', 'projects', 'offer', 'testimonials', 'contact'],
-            menu: 'navMenu'
-        });
 
-
-        $(window).on('load', function() {
-            $(".anotherDiv").removeClass("preload", 10000, "easeInBack");
-         });
-
+        
+        // $('#fullpage').fullpage({
+        //     anchors:['home', 'about', 'projects', 'offer', 'testimonials', 'contact'],
+        //     menu: 'navMenu'
+        // });
     },
+
+
 
 
 
