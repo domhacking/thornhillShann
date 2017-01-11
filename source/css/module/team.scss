@@ -51,4 +51,19 @@
         line-height: 1;
         padding: 0 20px;
     }
+
+    @media #{$viewport-mobile}{
+        .team-member{
+            margin-top: 30px;
+        }
+
+        .image{
+            height: 30vw;
+            width: 30vw;
+        }
+
+        .section-heading--team{
+            padding-bottom: 0;
+        }
+    }
 }

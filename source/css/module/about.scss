@@ -14,6 +14,11 @@
         // height: 50%;
     }
 
+    .text{
+        margin-bottom: 20px;
+    }
+
+
     .content-container--about{
         max-width: 900px;
         width: 100%;
@@ -24,8 +29,8 @@
     .parallax--about{
         background-image: url("../img/bg-image.jpg");
         background-position: 0 0;
-        background-size: cover;
-        // background-repeat: no-repeat;
-        height: 500px;
+        // background-size: cover;
+        background-repeat: no-repeat;
+        height: 400px;
     }
 }

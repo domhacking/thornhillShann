@@ -1,21 +1,27 @@
 <!--
-  @module:   nav
-  @scss:     ./source/css/module/nav.scss
-  @js:       ./source/js/module/nav/nav.js
+@module:   nav
+@scss:     ./source/css/module/nav.scss
+@js:       ./source/js/module/nav/nav.js
 -->
 
 <div class="nav">
-  <div class="logo">
-      <a href="#home">
-          <img src="img/nav-logo--white.png" alt="">
-      </a>
-  </div>
+    <div class="burger-container {{expanded ? 'active-burger': ' '}}" on-click="burger">
+        <span class="burger-bar"></span>
+    </div>
 
-  <ul id="navMenu" class="nav-item-container">
-      {{#each nav}}
-      <li class="nav-item">
-          <a href="#{{dataAnchor}}">{{navItem}}</a>
-      </li>
-      {{/each}}
-  </ul>
+    <div class="logo">
+        <a href="#home">
+            <img src="img/nav-logo--white.png" alt="">
+        </a>
+    </div>
+
+    <div class="nav-item-wrapper {{expanded ? 'active-nav': ' '}}">
+        <ul id="navMenu" class="nav-item-container">
+            {{#each nav}}
+            <li class="nav-item">
+                <a href="#{{dataAnchor}}" on-click="removeWrapper">{{navItem}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
 </div>

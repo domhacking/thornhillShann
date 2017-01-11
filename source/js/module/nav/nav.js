@@ -40,6 +40,11 @@ module.exports = Module.extend({
         nav : nav
     },
 
+    oninit: function(){
+        this.on('burger', this.onBurgerClick);
+        this.on('removeWrapper', this.onBurgerClick);
+    },
+
     onrender: function() {
         var nav = document.querySelector('.nav');
         var navHeight = nav.offsetHeight;
@@ -69,6 +74,10 @@ module.exports = Module.extend({
         }); //missing );
 
     },
+
+    onBurgerClick: function(){
+        this.toggle('expanded')
+    }
 
 
 

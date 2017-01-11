@@ -19,9 +19,9 @@ module.exports = Module.extend({
 
         window.onscroll = function(){
           [].slice.call(parallax).forEach(function(el,i){
-
-            var windowYOffset = window.pageYOffset,
-                elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+             var windowWidth = window.innerWidth * 1.5,
+                 windowYOffset = window.pageYOffset - windowWidth,
+                 elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
 
             el.style.backgroundPosition = elBackgrounPos;
 

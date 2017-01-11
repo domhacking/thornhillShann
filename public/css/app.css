@@ -6703,6 +6703,8 @@ h1, h2, h3, h4, p {
   height: auto; }
   .about .wrapper--about {
     background-color: #4A606D; }
+  .about .text {
+    margin-bottom: 20px; }
   .about .content-container--about {
     max-width: 900px;
     width: 100%;
@@ -6711,8 +6713,8 @@ h1, h2, h3, h4, p {
   .about .parallax--about {
     background-image: url("../img/bg-image.jpg");
     background-position: 0 0;
-    background-size: cover;
-    height: 500px; }
+    background-repeat: no-repeat;
+    height: 400px; }
 
 /**
  * @module:   footer
@@ -6775,10 +6777,10 @@ h1, h2, h3, h4, p {
     color: red; }
 
 /**
- * @module:   nav
- * @js:       ./source/js/module/nav/nav.js
- * @html:     ./source/js/module/nav/nav.html
- */
+* @module:   nav
+* @js:       ./source/js/module/nav/nav.js
+* @html:     ./source/js/module/nav/nav.html
+*/
 .nav {
   z-index: 2;
   position: fixed;
@@ -6797,9 +6799,11 @@ h1, h2, h3, h4, p {
     .nav .logo img {
       height: 100%;
       width: auto; }
-  .nav .nav-item-container {
+  .nav .nav-item-wrapper {
     margin-bottom: 0;
     float: right; }
+  .nav .nav-item-container {
+    margin: 0; }
   .nav .nav-item {
     font-family: "Myriad Pro", serif;
     display: inline-block;
@@ -6816,11 +6820,110 @@ h1, h2, h3, h4, p {
     border-bottom: 1px solid #fff;
     opacity: 1;
     transition: opacity 0.3s ease; }
+  .nav .burger-container {
+    display: none; }
   @media screen and (min-width: 1450px) {
     .nav .logo {
       height: 85px; }
     .nav .nav-item {
       padding: 35px 23px; } }
+  @media screen and (max-width: 780px) {
+    .nav.nav {
+      height: 100%;
+      background-color: transparent; }
+    .nav .logo {
+      width: 100%;
+      background: #4A606D;
+      position: fixed;
+      z-index: 3; }
+    .nav .nav-item-wrapper {
+      height: 100%;
+      width: 100%;
+      left: -100%;
+      position: absolute;
+      transition: all 1s ease;
+      background-color: #4A606D;
+      z-index: 2; }
+      .nav .nav-item-wrapper.active-nav {
+        left: 0;
+        transition: all 0.5s ease; }
+    .nav .nav-item-container {
+      display: block;
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      width: 100%;
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+      float: none;
+      text-align: center;
+      margin-left: 0;
+      font-size: 20px;
+      font-weight: bold; }
+    .nav .nav-item {
+      display: block; }
+    .nav .burger-container {
+      display: block;
+      position: absolute;
+      right: 0;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      width: 65px;
+      height: 65px;
+      font-size: 0;
+      text-indent: -9999px;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+      box-shadow: none;
+      border-radius: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+      z-index: 4; }
+      .nav .burger-container:focus {
+        outline: none; }
+      .nav .burger-container.active-burger {
+        background-color: #839CAB; }
+        .nav .burger-container.active-burger .burger-bar {
+          background: none; }
+        .nav .burger-container.active-burger .burger-bar:before {
+          top: 0;
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg); }
+        .nav .burger-container.active-burger .burger-bar:after {
+          bottom: 0;
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+        .nav .burger-container.active-burger .burger-bar:before, .nav .burger-container.active-burger .burger-bar:after {
+          transition-delay: 0s, 0.3s; }
+    .nav .burger-bar {
+      display: block;
+      position: absolute;
+      top: 30px;
+      left: 10px;
+      right: 10px;
+      height: 6px;
+      background: white;
+      transition: background 0s 0.3s; }
+    .nav .burger-bar::before,
+    .nav .burger-bar::after {
+      position: absolute;
+      display: block;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background-color: #fff;
+      content: "";
+      transition-duration: 0.3s, 0.3s;
+      transition-delay: 0.3s, 0s; }
+    .nav .burger-bar::before {
+      top: -15px;
+      transition-property: top, transform; }
+    .nav .burger-bar::after {
+      bottom: -15px;
+      transition-property: bottom, transform; } }
 
 /**
  * @module:   offer
@@ -6965,52 +7068,61 @@ h1, h2, h3, h4, p {
     font-size: 12px;
     line-height: 1;
     padding: 0 20px; }
+  @media screen and (max-width: 780px) {
+    .team .team-member {
+      margin-top: 30px; }
+    .team .image {
+      height: 30vw;
+      width: 30vw; }
+    .team .section-heading--team {
+      padding-bottom: 0; } }
 
 /**
  * @module:   testimonials
  * @js:       ./source/js/module/testimonials/testimonials.js
  * @html:     ./source/js/module/testimonials/testimonials.html
  */
-.testimonials .section-heading {
-  padding-top: 20px; }
-
-.testimonials .testimonials-row {
-  height: 33vw; }
-
-.testimonials .testimonials-img {
-  height: 100%;
-  margin: 0;
-  background-image: url("../img/bg-kitchen.jpg");
-  background-size: cover;
-  background-position: center; }
-
-.testimonials .testimonials-text-wrapper {
-  background-color: #839CAB;
-  height: 100%;
-  text-align: center;
-  position: relative;
-  padding: 30px; }
-  .testimonials .testimonials-text-wrapper:hover .testimonials-text-container {
-    border: solid 3px #fff; }
-
-.testimonials .testimonials-text-container {
-  position: relative;
-  height: 100%; }
-
-.testimonials .testimonials-text-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%); }
-
-.testimonials .testimonials-title {
-  font-weight: normal;
-  margin-bottom: 20px; }
-
-.testimonials .testimonials-quote {
-  font-style: italic;
-  line-height: 2; }
+.testimonials {
+  height: auto; }
+  .testimonials .section-heading {
+    padding-top: 20px; }
+  .testimonials .testimonials-row {
+    height: 33vw; }
+  .testimonials .testimonials-img {
+    height: 100%;
+    margin: 0;
+    background-image: url("../img/bg-kitchen.jpg");
+    background-size: cover; }
+  .testimonials .testimonials-text-wrapper {
+    background-color: #839CAB;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    padding: 30px; }
+    .testimonials .testimonials-text-wrapper:hover .testimonials-text-container {
+      border: solid 3px #fff; }
+  .testimonials .testimonials-text-container {
+    position: relative;
+    height: 100%; }
+  .testimonials .testimonials-text-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); }
+  .testimonials .testimonials-title {
+    font-weight: normal;
+    margin-bottom: 20px; }
+  .testimonials .testimonials-quote {
+    font-style: italic;
+    line-height: 2; }
+  @media screen and (max-width: 780px) {
+    .testimonials .testimonials-row {
+      height: auto; }
+    .testimonials .testimonials-text-content {
+      position: relative; }
+    .testimonials .testimonials-img {
+      height: 100vw; } }
 
 /*------------------------------------*    #SPACING
 \*------------------------------------*/

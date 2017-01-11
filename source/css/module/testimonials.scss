@@ -6,7 +6,7 @@
 
 
 @include module("testimonials") {
-    // height: auto;
+    height: auto;
 
     .section-heading{
         padding-top: 20px;
@@ -20,7 +20,9 @@
         margin: 0;
         background-image: url('../img/bg-kitchen.jpg');
         background-size: cover;
-        background-position: center;
+        // background-position: center;
+        // background-position: 0 0;
+        // background-repeat: no-repeat;
     }
 
     .testimonials-text-wrapper{
@@ -57,5 +59,20 @@
     .testimonials-quote{
         font-style: italic;
         line-height: 2;
+    }
+
+    @media #{$viewport-mobile}{
+        .testimonials-row{
+            height: auto;
+        }
+
+        .testimonials-text-content{
+            position: relative;
+        }
+
+        .testimonials-img{
+            height: 100vw
+        }
+
     }
 }

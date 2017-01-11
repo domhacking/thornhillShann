@@ -29622,9 +29622,9 @@ module.exports = Module.extend({
 
         window.onscroll = function(){
           [].slice.call(parallax).forEach(function(el,i){
-
-            var windowYOffset = window.pageYOffset,
-                elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+             var windowWidth = window.innerWidth * 1.5,
+                 windowYOffset = window.pageYOffset - windowWidth,
+                 elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
 
             el.style.backgroundPosition = elBackgrounPos;
 
@@ -29709,7 +29709,7 @@ Ractive.components['ui-testimonials'] = require('./testimonials/testimonials.js'
 module.exports = Ractive;
 
 },{"./about/about.js":7,"./footer/footer.js":10,"./home/home.js":12,"./nav/nav.js":15,"./offer/offer.js":17,"./preload/preload.js":19,"./projects/projects.js":21,"./team/team.js":23,"./testimonials/testimonials.js":25,"ractive":4}],14:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":"logo"},"f":[{"t":7,"e":"a","a":{"href":"#home"},"f":[{"t":7,"e":"img","a":{"src":"img/nav-logo--white.png","alt":""}}]}]}," ",{"t":7,"e":"ul","a":{"id":"navMenu","class":"nav-item-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"nav-item"},"f":[{"t":7,"e":"a","a":{"href":["#",{"t":2,"r":"dataAnchor"}]},"f":[{"t":2,"r":"navItem"}]}]}],"n":52,"r":"nav"}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":["burger-container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"active-burger\":\" \""}}]},"v":{"click":"burger"},"f":[{"t":7,"e":"span","a":{"class":"burger-bar"}}]}," ",{"t":7,"e":"div","a":{"class":"logo"},"f":[{"t":7,"e":"a","a":{"href":"#home"},"f":[{"t":7,"e":"img","a":{"src":"img/nav-logo--white.png","alt":""}}]}]}," ",{"t":7,"e":"div","a":{"class":["nav-item-wrapper ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"active-nav\":\" \""}}]},"f":[{"t":7,"e":"ul","a":{"id":"navMenu","class":"nav-item-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"nav-item"},"f":[{"t":7,"e":"a","a":{"href":["#",{"t":2,"r":"dataAnchor"}]},"v":{"click":"removeWrapper"},"f":[{"t":2,"r":"navItem"}]}]}],"n":52,"r":"nav"}]}]}]}]}
 },{}],15:[function(require,module,exports){
 /**
 * @module:   nav
@@ -29753,6 +29753,11 @@ module.exports = Module.extend({
         nav : nav
     },
 
+    oninit: function(){
+        this.on('burger', this.onBurgerClick);
+        this.on('removeWrapper', this.onBurgerClick);
+    },
+
     onrender: function() {
         var nav = document.querySelector('.nav');
         var navHeight = nav.offsetHeight;
@@ -29782,6 +29787,10 @@ module.exports = Module.extend({
         }); //missing );
 
     },
+
+    onBurgerClick: function(){
+        this.toggle('expanded')
+    }
 
 
 
@@ -29992,7 +30001,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":8,"./projects.html":20,"jquery":3,"slick-carousel-browserify":5}],22:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"team container-fluid section"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["Team"]}," ",{"t":7,"e":"div","a":{"class":"row team-member-container"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":"team-member col-sm-3"},"f":[{"t":7,"e":"div","a":{"class":"image"},"f":[{"t":2,"r":"img"}]}," ",{"t":7,"e":"div","a":{"class":"name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"div","a":{"class":"position"},"f":[{"t":2,"r":"position"}]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"div","a":{"class":"description"},"f":[{"t":2,"r":"description"}]}]}],"n":52,"r":"team"}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"team container-fluid section"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading section-heading--team"},"f":["Team"]}," ",{"t":7,"e":"div","a":{"class":"row team-member-container"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":"team-member col-md-3 col-sm-6"},"f":[{"t":7,"e":"div","a":{"class":"image"},"f":[{"t":2,"r":"img"}]}," ",{"t":7,"e":"div","a":{"class":"name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"div","a":{"class":"position"},"f":[{"t":2,"r":"position"}]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"div","a":{"class":"description"},"f":[{"t":2,"r":"description"}]}]}],"n":52,"r":"team"}]}]}]}
 },{}],23:[function(require,module,exports){
 /**
  * @module:   team
@@ -30038,7 +30047,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":8,"./team.html":22}],24:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"testimonials section container-fluid","id":"testimonials"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading section-heading--teal "},"f":["Testimonials"]}," ",{"t":7,"e":"div","a":{"class":"row testimonials-row"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-wrapper col-lg-4 col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-container"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-content"},"f":[{"t":7,"e":"h3","a":{"class":"testimonials-title"},"f":["Suzie from Chelsea"]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"p","a":{"class":"testimonials-quote"},"f":["\"Thornhill Shann did a fantastic job. They delivered it on time, in the budget. Now our home looks lovely\""]}]}]}]}," ",{"t":7,"e":"div","a":{"class":"col-lg-8 col-md-6 testimonials-img parallax"}}]}," ",{"t":7,"e":"div","a":{"class":"row testimonials-row"},"f":[{"t":7,"e":"div","a":{"class":"col-lg-8 col-md-6 testimonials-img parallax"}}," ",{"t":7,"e":"div","a":{"class":"testimonials-text-wrapper col-lg-4 col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-container"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-content"},"f":[{"t":7,"e":"h3","a":{"class":"testimonials-title"},"f":["Suzie from Chelsea"]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"p","a":{"class":"testimonials-quote"},"f":["\"Thornhill Shann did a fantastic job. They delivered it on time, in the budget. Now our home looks lovely\""]}]}]}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"testimonials section container-fluid","id":"testimonials"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading section-heading--teal "},"f":["Testimonials"]}," ",{"t":7,"e":"div","a":{"class":"row testimonials-row"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-wrapper col-lg-4 col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-container"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-content"},"f":[{"t":7,"e":"h3","a":{"class":"testimonials-title"},"f":["Suzie from Chelsea"]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"p","a":{"class":"testimonials-quote"},"f":["\"Thornhill Shann did a fantastic job. They delivered it on time, in the budget. Now our home looks lovely\""]}]}]}]}," ",{"t":7,"e":"div","a":{"class":"col-lg-8 col-md-6 testimonials-img parallax-testimonials"}}]}," ",{"t":7,"e":"div","a":{"class":"row testimonials-row"},"f":[{"t":7,"e":"div","a":{"class":"col-lg-8 col-md-6 testimonials-img parallax-testimonials"}}," ",{"t":7,"e":"div","a":{"class":"testimonials-text-wrapper col-lg-4 col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-container"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-content"},"f":[{"t":7,"e":"h3","a":{"class":"testimonials-title"},"f":["Suzie from Chelsea"]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"p","a":{"class":"testimonials-quote"},"f":["\"Thornhill Shann did a fantastic job. They delivered it on time, in the budget. Now our home looks lovely\""]}]}]}]}]}]}]}
 },{}],25:[function(require,module,exports){
 /**
  * @module:   testimonials
@@ -30051,7 +30060,27 @@ var Module = require('../abstract-module');
 
 module.exports = Module.extend({
 
-  template: require('./testimonials.html')
+  template: require('./testimonials.html'),
+
+  onrender: function(){
+    //   (function(){
+      //
+    //     var parallaxTestimonials = document.querySelectorAll(".parallax-testimonials"),
+    //         speed = 0.5;
+      //
+    //     window.onscroll = function(){
+    //       [].slice.call(parallaxTestimonials).forEach(function(el,i){
+    //          var windowWidth = window.innerWidth,
+    //              windowYOffset = window.pageYOffset,
+    //              elBackgrounPos = "50% " + (windowYOffset * speed) + "%";
+      //
+    //         el.style.backgroundPosition = elBackgrounPos;
+      //
+    //       });
+    //     };
+      //
+    //     })();
+  }
 
 });
 
