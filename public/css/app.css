@@ -6971,8 +6971,6 @@ h1, h2, h3, h4, p {
   background-color: #4A606D;
   color: #4A606D;
   height: auto; }
-  .projects .slick-slider {
-    margin-bottom: 0; }
   .projects .section-heading {
     padding-top: 20px;
     color: #fff; }
@@ -7011,20 +7009,72 @@ h1, h2, h3, h4, p {
     font-style: italic; }
   .projects .projectLightBox {
     opacity: 0;
+    transition: opacity 1s ease; }
+  .projects .lightboxActive .projectLightBox {
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: black;
     top: 0;
     left: 0;
-    transition: all 1s ease-in; }
-  .projects .noPopupProject {
-    height: 100%; }
-  .projects .popupProject {
-    height: 100%; }
-    .projects .popupProject .projectLightBox {
-      display: block;
-      opacity: 1; }
+    opacity: 1;
+    transition: all 1s ease-in;
+    z-index: 1000;
+    background-color: black;
+    transition: 1s opacity ease; }
+  .projects .close-popup {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 2000;
+    color: white;
+    cursor: pointer; }
+  .projects .bottom-carousel {
+    overflow-y: scroll;
+    height: 100%;
+    position: fixed; }
+  .projects .popup__content-wrapper {
+    padding: 100px 20px; }
+  .projects .popup__panel {
+    color: #fff;
+    height: 100%;
+    background-color: #4A606D;
+    float: right; }
+  .projects .popup__location {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 6px; }
+  .projects .popup__name {
+    text-transform: uppercase; }
+  .projects .gold-line {
+    margin: 30px 0;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0)); }
+  .projects .popup__headings-container {
+    width: 50%;
+    display: inline-block;
+    font-weight: bold; }
+  .projects .popup__content-container {
+    width: 50%;
+    vertical-align: top;
+    display: inline-block; }
+  .projects .popup__sub-heading {
+    vertical-align: top;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    line-height: 1.5; }
+  .projects .popup__content {
+    line-height: 1.5; }
+    .projects .popup__content--list-container {
+      margin: 0 20px; }
+  .projects .popup__content--description {
+    margin-top: 10px;
+    position: relative; }
+  .projects .slick-slider .slick-track, .projects .slick-slider .slick-list {
+    -ms-transform: none !important;
+        transform: none !important; }
+  .projects .slick-slider {
+    margin-bottom: 0; }
   .projects .slick-next {
     right: 25px; }
   .projects .slick-prev {

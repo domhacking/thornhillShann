@@ -8,19 +8,69 @@
     <h2 class="section-heading">Projects</h2>
     <div class="projectsCarousel">
         {{#each projects:i}}
-            <div class="project project--{{name}} {{projectLightbox ? 'lightboxProject' : 'noLightboxProject'}}" on-click="projectClick">
+            <div class="project project--{{name}}" on-click="projectClick{{i}}">
                 <div class="project-content-wrapper">
                     <div class="project-content-container">
                         <h3 class="project__name">{{name}}</h3>
                         <p class="project__location">{{location}}</p>
                     </div>
                 </div>
-                <!-- <div class="projectLightBox">
+                <div class="projectLightBox">
+                    <div class="close-popup">X</div>
+                    <!-- <div class="row"> -->
+
+                        <div class="pop-image-container col-md-8">
+                            <!-- <div class="activeImage"><img src="../img/bg-sittingRoom.jpg" alt=""></div> -->
+                            <div class="bottom-carousel">
+                                <div id="fullpage">
+                                    {{#each images}}
+                                    <div class="activeImage section">
+                                        <img src="{{this}}" alt="">
+                                    </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup__panel col-md-4">
+                            <div class="popup__content-wrapper">
+                                <div class="popup__location">{{location}}</div>
+                                <div class="popup__name">{{name}}</div>
+
+                                <hr class="gold-line">
+
+                                <div class="popup__headings-container">
+                                    <p class="popup__sub-heading">Client:</p>
+                                    <p class="popup__sub-heading">Project Type:</p>
+                                    <p class="popup__sub-heading">Sq ft:</p>
+                                    <p class="popup__sub-heading">Project Value:</p>
+                                    <p class="popup__sub-heading">Services:</p>
+                                </div><!--
+                                --><div class="popup__content-container">
+                                    <div class="popup__content">{{client}}</div>
+                                    <div class="popup__content">{{architect}}</div>
+                                    <div class="popup__content">{{structural}}</div>
+                                    <div class="popup__content">{{price}}</div>
+                                    <ul class="popup__content popup__content--list-container">
+                                        {{#each features}}
+                                        <li class="popup__content popup__content--list-item">{{this}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+
+                                <hr class="gold-line">
+
+                                <div class="popup__content popup__content--description">{{description}}</div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                    <!-- <div class="slider__next slider" on-click='goto:{{current + 1}}'></div>
                     {{#each images}}
-                    <div class="image">{{this}}</div>
+                        <div class="activeImage"><img src="../img/img-{{location}}-{{current}}.jpg" alt=""></div>
                     {{/each}}
-                    <div class="">POP UP</div>
-                </div> -->
+                    div.
+                    <div class="slider__prev {{lightBox ? 'slider' : 'displayNone'}}" on-click='goto:{{current - 1}}'></div>
+                    <div class="">POP UP</div> -->
+                </div>
             </div>
         {{/each}}
     </div>

@@ -6,6 +6,7 @@ module.exports = function() {
 
   return new Ractive({
 
+
     el: document.querySelector('.main'),
 
     template: require('./main.html'),
@@ -17,11 +18,12 @@ module.exports = function() {
     },
 
     oninit: function() {
+        
     },
 
     onrender: function() {
 
-        
+
         // $('#fullpage').fullpage({
         //     anchors:['home', 'about', 'projects', 'offer', 'testimonials', 'contact'],
         //     menu: 'navMenu'
