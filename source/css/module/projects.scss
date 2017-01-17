@@ -31,12 +31,12 @@
 
         }
 
-        &--kensington{
+        &--hackney{
             background-image: url('../img/project-bg-kensington.jpg');
 
         }
 
-        &--fulham{
+        &--brookGreen{
             background-image: url('../img/project-bg-fulham.jpg');
         }
 
@@ -82,7 +82,7 @@
 
     // POP UP STYLING
     .lightboxActive{
-        
+
         .projectLightBox{
             position: fixed;
             width: 100%;
@@ -93,7 +93,6 @@
             // display: block;
             transition: all 1s ease-in;
             z-index: 1000;
-            background-color: black;
             transition: 1s opacity ease;
         }
     }
@@ -102,12 +101,23 @@
         position: fixed;
         right: 20px;
         top: 20px;
-        z-index: 2000;
+        z-index: 20;
         color: white;
         cursor: pointer;
     }
 
-    .bottom-carousel{
+    .info-icon{
+        position: fixed;
+        right: 0px;
+        top: 50px;
+        z-index: 20;
+        background-color: $teal;
+        color: $white;
+        height: 50px;
+        width: 50px;
+    }
+
+    .project-images-container{
         overflow-y: scroll;
         height: 100%;
         position: fixed;
@@ -117,11 +127,27 @@
         padding: 100px 20px;
     }
 
+    .row-project{
+        height: 100%;
+    }
+
+    .project-image{
+        height: 100%;
+        width: 100%;
+    }
+
     .popup__panel{
         color: $white;
         height: 100%;
         background-color: $teal;
         float: right;
+        position: absolute;
+        right: -100%;
+        transition: all 0.3s ease;
+
+        &.activate-panel{
+            right: 0%;
+        }
     }
 
     .popup__location{
@@ -172,6 +198,16 @@
     .popup__content--description{
         margin-top: 10px;
         position: relative;
+    }
+
+
+    .popup-image-wrapper, .project-images-container{
+        height: 100%;
+        width: 100%;
+    }
+
+    .project-image{
+        background-size: cover;
     }
 
 

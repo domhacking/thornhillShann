@@ -6983,9 +6983,9 @@ h1, h2, h3, h4, p {
     background-size: 100%; }
     .projects .project--chelsea {
       background-image: url("../img/project-bg-chelsea.jpg"); }
-    .projects .project--kensington {
+    .projects .project--hackney {
       background-image: url("../img/project-bg-kensington.jpg"); }
-    .projects .project--fulham {
+    .projects .project--brookGreen {
       background-image: url("../img/project-bg-fulham.jpg"); }
     .projects .project:hover {
       background-size: 105%; }
@@ -7019,26 +7019,44 @@ h1, h2, h3, h4, p {
     opacity: 1;
     transition: all 1s ease-in;
     z-index: 1000;
-    background-color: black;
     transition: 1s opacity ease; }
   .projects .close-popup {
     position: fixed;
     right: 20px;
     top: 20px;
-    z-index: 2000;
+    z-index: 20;
     color: white;
     cursor: pointer; }
-  .projects .bottom-carousel {
+  .projects .info-icon {
+    position: fixed;
+    right: 0px;
+    top: 50px;
+    z-index: 20;
+    background-color: #4A606D;
+    color: #fff;
+    height: 50px;
+    width: 50px; }
+  .projects .project-images-container {
     overflow-y: scroll;
     height: 100%;
     position: fixed; }
   .projects .popup__content-wrapper {
     padding: 100px 20px; }
+  .projects .row-project {
+    height: 100%; }
+  .projects .project-image {
+    height: 100%;
+    width: 100%; }
   .projects .popup__panel {
     color: #fff;
     height: 100%;
     background-color: #4A606D;
-    float: right; }
+    float: right;
+    position: absolute;
+    right: -100%;
+    transition: all 0.3s ease; }
+    .projects .popup__panel.activate-panel {
+      right: 0%; }
   .projects .popup__location {
     text-transform: uppercase;
     font-weight: bold;
@@ -7070,6 +7088,11 @@ h1, h2, h3, h4, p {
   .projects .popup__content--description {
     margin-top: 10px;
     position: relative; }
+  .projects .popup-image-wrapper, .projects .project-images-container {
+    height: 100%;
+    width: 100%; }
+  .projects .project-image {
+    background-size: cover; }
   .projects .slick-slider .slick-track, .projects .slick-slider .slick-list {
     -ms-transform: none !important;
         transform: none !important; }

@@ -8,7 +8,7 @@
     <h2 class="section-heading">Projects</h2>
     <div class="projectsCarousel">
         {{#each projects:i}}
-            <div class="project project--{{name}}" on-click="projectClick{{i}}">
+            <div class="project project--{{class}}" on-click="projectClick{{i}}">
                 <div class="project-content-wrapper">
                     <div class="project-content-container">
                         <h3 class="project__name">{{name}}</h3>
@@ -17,20 +17,18 @@
                 </div>
                 <div class="projectLightBox">
                     <div class="close-popup">X</div>
-                    <!-- <div class="row"> -->
+                    <div class="row row-project">
 
-                        <div class="pop-image-container col-md-8">
-                            <!-- <div class="activeImage"><img src="../img/bg-sittingRoom.jpg" alt=""></div> -->
-                            <div class="bottom-carousel">
-                                <div id="fullpage">
+                        <div class="popup-image-wrapper col-md-8">
+                            <div class="project-images-container">
+                                <!-- <div id="fullpage"> -->
                                     {{#each images}}
-                                    <div class="activeImage section">
-                                        <img src="{{this}}" alt="">
-                                    </div>
+                                    <div class="project-image" style="background-image:url({{this}})"></div>
                                     {{/each}}
-                                </div>
+                                <!-- </div> -->
                             </div>
                         </div>
+                        <div class="info-icon" on-click="information">i</div>
                         <div class="popup__panel col-md-4">
                             <div class="popup__content-wrapper">
                                 <div class="popup__location">{{location}}</div>
@@ -62,7 +60,7 @@
                                 <div class="popup__content popup__content--description">{{description}}</div>
                             </div>
                         </div>
-                    <!-- </div> -->
+                    </div>
                     <!-- <div class="slider__next slider" on-click='goto:{{current + 1}}'></div>
                     {{#each images}}
                         <div class="activeImage"><img src="../img/img-{{location}}-{{current}}.jpg" alt=""></div>

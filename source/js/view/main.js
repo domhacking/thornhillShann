@@ -1,5 +1,6 @@
 var Ractive = require('../module');
 var $ = require('jquery');
+var ScrollMagic = require('scrollMagic')
 // var fullpage = require('fullpage.js');
 
 module.exports = function() {
@@ -18,10 +19,13 @@ module.exports = function() {
     },
 
     oninit: function() {
-        
+
     },
 
     onrender: function() {
+    
+
+		// get all slides
 
 
         // $('#fullpage').fullpage({
