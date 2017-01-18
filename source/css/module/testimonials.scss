@@ -13,6 +13,13 @@
     }
     .testimonials-row{
         height: 33vw;
+
+        &:hover{
+            .testimonials-text-container{
+                // border: solid 3px $white;
+                // transition: 1s border ease;
+            }
+        }
     }
 
     .testimonials-img{
@@ -32,16 +39,14 @@
         position: relative;
         padding: 30px;
 
-        &:hover{
-            .testimonials-text-container{
-                border: solid 3px $white;
-            }
-        }
+
     }
 
     .testimonials-text-container{
         position: relative;
+        // transition: 1s opacity ease;
         height: 100%;
+        border: solid 3px $white;
     }
 
     .testimonials-text-content{

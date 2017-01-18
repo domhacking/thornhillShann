@@ -35450,7 +35450,7 @@ return jQuery;
 }));
 
 },{"jquery":4}],8:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"about section","id":"about"},"f":[{"t":7,"e":"div","a":{"class":"wrapper--about"},"f":[{"t":7,"e":"div","a":{"class":"content-container--about"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["About Us"]}," ",{"t":7,"e":"p","a":{"class":"text"},"f":["There's an old saying that failing to prepare is preparing to fail, and it's a sentiment that's at the heart of Thornhill Shann. Planning is, to our minds, the most important part of the job."]}," ",{"t":7,"e":"p","a":{"class":"text"},"f":["Too many contractors either begin without a formal timescale projection, or conversely employ so many layers of supervision that reaching any decision takes far too long, or that decision may be made by a person so far removed that they have no hands-on knowledge of the project itself."]}," ",{"t":7,"e":"p","a":{"class":"text"},"f":["We use only the best people, and use them to create a realistic and detailed timetable of works, tailored to our clients' requirements. Our craftsmen are employed directly by Thornhill Shann and our site managers are second-to-none, meaning that our plans will be created and executed by one team, who know your build inside out and are committed to creating a fantastic end result on time and on budget, from the outset."]}]}]}," ",{"t":7,"e":"div","a":{"class":"parallax parallax--about"}}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"about section","id":"about"},"f":[{"t":7,"e":"div","a":{"class":"wrapper--about"},"f":[{"t":7,"e":"div","a":{"class":"content-container--about"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["About Us"]}," ",{"t":7,"e":"p","a":{"class":"text"},"f":["There's an old saying that failing to prepare is preparing to fail, and it's a sentiment that's at the heart of Thornhill Shann. Planning is, to our minds, the most important part of the job."]}," ",{"t":7,"e":"p","a":{"class":"text"},"f":["Too many contractors either begin without a formal timescale projection, or conversely employ so many layers of supervision that reaching any decision takes far too long, or that decision may be made by a person so far removed that they have no hands-on knowledge of the project itself."]}," ",{"t":7,"e":"p","a":{"class":"text"},"f":["We use only the best people, and use them to create a realistic and detailed timetable of works, tailored to our clients' requirements. Our craftsmen are employed directly by Thornhill Shann and our site managers are second-to-none, meaning that our plans will be created and executed by one team, who know your build inside out and are committed to creating a fantastic end result on time and on budget, from the outset."]}]}]}," ",{"t":7,"e":"div","a":{"id":"parallax1","class":"parallaxParent"},"f":[{"t":7,"e":"div","a":{"class":"parallax--about"}}]}]}]}
 },{}],9:[function(require,module,exports){
 /**
  * @module:   about
@@ -35509,7 +35509,7 @@ module.exports = Ractive.extend({
 });
 
 },{"ractive":5}],11:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"footer section container-fluid","id":"contact"},"f":[{"t":7,"e":"a","a":{"href":"#home","class":"scroll-to-top"},"f":["Scroll to Top"]}," ",{"t":7,"e":"div","a":{"class":"row"},"f":[{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"footer-logo-container"},"f":[{"t":7,"e":"div","a":{"class":"logo"}}]}]}," ",{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"contact-details-container"},"f":[{"t":7,"e":"p","f":["Thornhill Shann Construction Limited"]}," ",{"t":7,"e":"p","f":["61A Greenwood Road, London, E8 1NT"]}," ",{"t":7,"e":"p","f":["Company Number: 10456724"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"mailto:contact@thornhillshann.co.uk"},"f":["contact@thornhillshann.co.uk"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"tel:02036542358"},"f":["0203 654 2358"]}]}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"footer section container-fluid","id":"contact"},"f":[{"t":7,"e":"a","a":{"href":"#home","class":"scroll-to-top"}}," ",{"t":7,"e":"div","a":{"class":"row"},"f":[{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"footer-logo-container"},"f":[{"t":7,"e":"div","a":{"class":"logo"}}]}]}," ",{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"contact-details-container"},"f":[{"t":7,"e":"p","f":["Thornhill Shann Construction Limited"]}," ",{"t":7,"e":"p","f":["61A Greenwood Road, London, E8 1NT"]}," ",{"t":7,"e":"p","f":["Company Number: 10456724"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"mailto:contact@thornhillshann.co.uk"},"f":["contact@thornhillshann.co.uk"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"tel:02036542358"},"f":["0203 654 2358"]}]}]}]}]}]}
 },{}],12:[function(require,module,exports){
 /**
  * @module:   footer
@@ -35527,7 +35527,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":10,"./footer.html":11}],13:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"home section","id":"home"},"f":[" ",{"t":7,"e":"a","a":{"class":"home__scroll-button","href":"#about"},"f":["Click me!"]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"home section","id":"home"},"f":[" ",{"t":7,"e":"h1","a":{"class":"logo"},"f":["Thornhill Shann"]}," ",{"t":7,"e":"a","a":{"class":"home__scroll-button","href":"#about"}}]}]}
 },{}],14:[function(require,module,exports){
 /**
  * @module:   home
@@ -35560,7 +35560,7 @@ Ractive.components['ui-testimonials'] = require('./testimonials/testimonials.js'
 module.exports = Ractive;
 
 },{"./about/about.js":9,"./footer/footer.js":12,"./home/home.js":14,"./nav/nav.js":17,"./offer/offer.js":19,"./preload/preload.js":21,"./projects/projects.js":23,"./team/team.js":25,"./testimonials/testimonials.js":27,"ractive":5}],16:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":["burger-container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"active-burger\":\" \""}}]},"v":{"click":"burger"},"f":[{"t":7,"e":"span","a":{"class":"burger-bar"}}]}," ",{"t":7,"e":"div","a":{"class":"logo"},"f":[{"t":7,"e":"a","a":{"href":"#home"},"f":[{"t":7,"e":"img","a":{"src":"img/nav-logo--white.png","alt":""}}]}]}," ",{"t":7,"e":"div","a":{"class":["nav-item-wrapper ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"active-nav\":\" \""}}]},"f":[{"t":7,"e":"ul","a":{"id":"navMenu","class":"nav-item-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"nav-item"},"f":[{"t":7,"e":"a","a":{"href":["#",{"t":2,"r":"dataAnchor"}]},"v":{"click":"removeWrapper"},"f":[{"t":2,"r":"navItem"}]}]}],"n":52,"r":"nav"}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":["burger-container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"active-burger\":\" \""}}]},"v":{"click":"burger"},"f":[{"t":7,"e":"span","a":{"class":"burger-bar"}}]}," ",{"t":7,"e":"div","a":{"class":"logo"},"f":[{"t":7,"e":"a","a":{"href":"#home"},"f":[{"t":7,"e":"img","a":{"src":"img/nav-logo--white.png","alt":""}}]}]}," ",{"t":7,"e":"div","a":{"class":["nav-item-wrapper ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"active-nav\":\" \""}}]},"f":[{"t":7,"e":"ul","a":{"id":"navMenu","class":"nav-item-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"nav-item"},"f":[{"t":7,"e":"a","a":{"href":["#",{"t":2,"r":"dataAnchor"}],"class":"nav-underline"},"v":{"click":"removeWrapper"},"f":[{"t":2,"r":"navItem"}]}]}],"n":52,"r":"nav"}]}]}]}]}
 },{}],17:[function(require,module,exports){
 /**
 * @module:   nav
@@ -35650,7 +35650,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":10,"./nav.html":16,"jquery":4}],18:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"offer section container-fluid","id":"offer"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["What we offer"]}," ",{"t":7,"e":"div","a":{"class":"row"},"f":[{"t":7,"e":"div","a":{"class":"offer-container"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":"offer-item col-sm-4"},"f":[{"t":7,"e":"img","a":{"class":"icon","src":[{"t":2,"r":"icon"}]}}," ",{"t":7,"e":"div","a":{"class":"offer-title"},"f":[{"t":2,"r":"offerTitle"}]}," ",{"t":7,"e":"div","a":{"class":"offer-description"},"f":[{"t":2,"r":"offerDescription"}]}]}],"n":52,"r":"offer"}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"offer section","id":"offer"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["What we offer"]}," ",{"t":7,"e":"div","a":{"class":"offer-container"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":"offer-item"},"f":[{"t":7,"e":"img","a":{"class":"icon","src":[{"t":2,"r":"icon"}]}}," ",{"t":7,"e":"div","a":{"class":"offer-title"},"f":[{"t":2,"r":"offerTitle"}]}," ",{"t":7,"e":"div","a":{"class":"offer-description"},"f":[{"t":2,"r":"offerDescription"}]}]}],"n":52,"r":"offer"}]}]}]}
 },{}],19:[function(require,module,exports){
 /**
  * @module:   offer
@@ -35730,7 +35730,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":10,"./preload.html":20,"jquery":4}],22:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"projects section","id":"projects"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["Projects"]}," ",{"t":7,"e":"div","a":{"class":"projectsCarousel"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":["project project--",{"t":2,"r":"class"}]},"v":{"click":{"n":["projectClick",{"t":2,"r":"i"}],"d":[]}},"f":[{"t":7,"e":"div","a":{"class":"project-content-wrapper"},"f":[{"t":7,"e":"div","a":{"class":"project-content-container"},"f":[{"t":7,"e":"h3","a":{"class":"project__name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"p","a":{"class":"project__location"},"f":[{"t":2,"r":"location"}]}]}]}," ",{"t":7,"e":"div","a":{"class":"projectLightBox"},"f":[{"t":7,"e":"div","a":{"class":"close-popup"},"f":["X"]}," ",{"t":7,"e":"div","a":{"class":"row row-project"},"f":[{"t":7,"e":"div","a":{"class":"popup-image-wrapper col-md-8"},"f":[{"t":7,"e":"div","a":{"class":"project-images-container"},"f":[" ",{"t":4,"f":[{"t":7,"e":"div","a":{"class":"project-image","style":["background-image:url(",{"t":2,"r":"."},")"]}}],"n":52,"r":"images"}," "]}]}," ",{"t":7,"e":"div","a":{"class":"info-icon"},"v":{"click":"information"},"f":["i"]}," ",{"t":7,"e":"div","a":{"class":"popup__panel col-md-4"},"f":[{"t":7,"e":"div","a":{"class":"popup__content-wrapper"},"f":[{"t":7,"e":"div","a":{"class":"popup__location"},"f":[{"t":2,"r":"location"}]}," ",{"t":7,"e":"div","a":{"class":"popup__name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"hr","a":{"class":"gold-line"}}," ",{"t":7,"e":"div","a":{"class":"popup__headings-container"},"f":[{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Client:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Project Type:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Sq ft:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Project Value:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Services:"]}]},{"t":7,"e":"div","a":{"class":"popup__content-container"},"f":[{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"client"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"architect"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"structural"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"price"}]}," ",{"t":7,"e":"ul","a":{"class":"popup__content popup__content--list-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"popup__content popup__content--list-item"},"f":[{"t":2,"r":"."}]}],"n":52,"r":"features"}]}]}," ",{"t":7,"e":"hr","a":{"class":"gold-line"}}," ",{"t":7,"e":"div","a":{"class":"popup__content popup__content--description"},"f":[{"t":2,"r":"description"}]}]}]}]}," "]}]}],"n":52,"i":"i","r":"projects"}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"projects section","id":"projects"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["Projects"]}," ",{"t":7,"e":"div","a":{"class":"projectsCarousel"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":["project project--",{"t":2,"r":"class"}]},"v":{"click":{"n":["projectClick",{"t":2,"r":"i"}],"d":[]}},"f":[{"t":7,"e":"div","a":{"class":"project-content-wrapper"},"f":[{"t":7,"e":"div","a":{"class":"project-content-container"},"f":[{"t":7,"e":"h3","a":{"class":"project__name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"p","a":{"class":"project__location"},"f":[{"t":2,"r":"location"}]}]}]}," ",{"t":7,"e":"div","a":{"class":"projectLightBox"},"f":[{"t":7,"e":"div","a":{"class":"close-popup"},"f":["X"]}," ",{"t":7,"e":"div","a":{"class":"row row-project"},"f":[{"t":7,"e":"div","a":{"class":"popup-image-wrapper col-md-8"},"f":[{"t":7,"e":"div","a":{"class":"project-images-container"},"f":[" ",{"t":4,"f":[{"t":7,"e":"div","a":{"class":"project-image","style":["background-image:url(",{"t":2,"r":"."},")"]}}],"n":52,"r":"images"}," "]}]}," ",{"t":7,"e":"div","a":{"class":"popup__panel-wrapper col-md-4"},"f":[{"t":7,"e":"div","a":{"class":"info-icon"},"v":{"click":"information"},"f":["i"]}," ",{"t":7,"e":"div","a":{"class":"popup__panel"},"f":[{"t":7,"e":"div","a":{"class":"popup__content-wrapper"},"f":[{"t":7,"e":"div","a":{"class":"popup__location"},"f":[{"t":2,"r":"location"}]}," ",{"t":7,"e":"div","a":{"class":"popup__name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"hr","a":{"class":"gold-line"}}," ",{"t":7,"e":"div","a":{"class":"popup__headings-container"},"f":[{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Client:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Project Type:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Sq ft:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Project Value:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Services:"]}]},{"t":7,"e":"div","a":{"class":"popup__content-container"},"f":[{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"client"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"architect"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"structural"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"price"}]}," ",{"t":7,"e":"ul","a":{"class":"popup__content popup__content--list-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"popup__content popup__content--list-item"},"f":[{"t":2,"r":"."}]}],"n":52,"r":"features"}]}]}," ",{"t":7,"e":"hr","a":{"class":"gold-line"}}," ",{"t":7,"e":"div","a":{"class":"popup__content popup__content--description"},"f":[{"t":2,"r":"description"}]}]}]}]}]}," "]}]}],"n":52,"i":"i","r":"projects"}]}]}]}
 },{}],23:[function(require,module,exports){
 /**
 * @module:   projects
@@ -35810,7 +35810,7 @@ module.exports = Module.extend({
         for(var i=0; i< projectsArray.length; i++) {
             (function(index){
                 projectsArray[index].addEventListener("click", function(){
-                    this.classList.add('lightboxActive');
+                    this.classList.toggle('lightboxActive');
                     var that = this;
 
                     // scrollMagicActivation();
@@ -35988,15 +35988,14 @@ module.exports = function() {
     },
 
     onrender: function() {
-    
 
-		// get all slides
+        var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
+        new ScrollMagic.Scene({triggerElement: "#parallax1"})
+					.setTween("#parallax1 > div", {y: "80%"})
+					.addIndicators()
+					.addTo(controller);
 
-        // $('#fullpage').fullpage({
-        //     anchors:['home', 'about', 'projects', 'offer', 'testimonials', 'contact'],
-        //     menu: 'navMenu'
-        // });
     },
 
 

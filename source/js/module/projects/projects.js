@@ -76,7 +76,7 @@ module.exports = Module.extend({
         for(var i=0; i< projectsArray.length; i++) {
             (function(index){
                 projectsArray[index].addEventListener("click", function(){
-                    this.classList.add('lightboxActive');
+                    this.classList.toggle('lightboxActive');
                     var that = this;
 
                     // scrollMagicActivation();

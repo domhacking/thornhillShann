@@ -23,15 +23,14 @@ module.exports = function() {
     },
 
     onrender: function() {
-    
 
-		// get all slides
+        var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
+        new ScrollMagic.Scene({triggerElement: "#parallax1"})
+					.setTween("#parallax1 > div", {y: "80%"})
+					.addIndicators()
+					.addTo(controller);
 
-        // $('#fullpage').fullpage({
-        //     anchors:['home', 'about', 'projects', 'offer', 'testimonials', 'contact'],
-        //     menu: 'navMenu'
-        // });
     },
 
 

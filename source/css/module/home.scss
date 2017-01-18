@@ -18,10 +18,10 @@
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        height: 30%;
+        height: 50%;
         width: auto;
         position: absolute;
-        top: 55%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -32,5 +32,17 @@
         left: 50%;
         transform: translateY(-50%);
         color: red;
+        background-image: url("../img/scroll-white.png");
+        background-size: cover;
+        background-position: center;
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+
+        &:hover{
+            transition: 0.2s ease opacity;
+            opacity: 0.7;
+        }
+
     }
 }
