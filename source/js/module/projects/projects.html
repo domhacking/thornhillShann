@@ -8,7 +8,7 @@
     <h2 class="section-heading">Projects</h2>
     <div class="projectsCarousel">
         {{#each projects:i}}
-            <div class="project project--{{class}}" on-click="projectClick{{i}}">
+            <div class="project project--{{class}}" on-click="projectClick">
                 <div class="project-content-wrapper">
                     <div class="project-content-container">
                         <h3 class="project__name">{{name}}</h3>
@@ -21,11 +21,11 @@
 
                         <div class="popup-image-wrapper col-md-8">
                             <div class="project-images-container">
-                                <!-- <div id="fullpage"> -->
-                                    {{#each images}}
-                                    <div class="project-image" style="background-image:url({{this}})"></div>
+                                <div id="pinContainer">
+                                    {{#each images:i}}
+                                    <div class="project-image project-image{{i}}" style="background-image:url({{this}})"></div>
                                     {{/each}}
-                                <!-- </div> -->
+                                </div>
                             </div>
                         </div>
                         <div class="popup__panel-wrapper col-md-4">

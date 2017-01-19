@@ -6712,13 +6712,13 @@ h1, h2, h3, h4, p {
     padding: 0 25px 80px; }
   .about .parallax--about {
     background-image: url("../img/bg-image.jpg");
-    background-repeat: no-repeat; }
-  .about .parallaxParent > * {
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 200%;
     position: relative;
-    top: -100%; }
+    top: -160%; }
   .about .parallaxParent {
-    height: 100vh;
+    height: 50vh;
     overflow: hidden; }
 
 /**
@@ -6776,7 +6776,6 @@ h1, h2, h3, h4, p {
   background-size: cover;
   background-position: center; }
   .home .logo {
-    text-indent: 150%;
     overflow: hidden;
     white-space: nowrap;
     background-image: url("../img/ts-logo--white.png");
@@ -7021,6 +7020,8 @@ h1, h2, h3, h4, p {
   background-color: #4A606D;
   color: #4A606D;
   height: auto; }
+  .projects #pinContainer {
+    height: 100%; }
   .projects .section-heading {
     padding-top: 20px;
     color: #fff; }
@@ -7227,11 +7228,18 @@ h1, h2, h3, h4, p {
     padding-top: 20px; }
   .testimonials .testimonials-row {
     height: 33vw; }
-  .testimonials .testimonials-img {
+  .testimonials .testimonials-parent {
     height: 100%;
+    padding: 0;
+    overflow: hidden; }
+  .testimonials .testimonials-img {
+    height: 200%;
+    position: relative;
+    top: -100%;
     margin: 0;
     background-image: url("../img/bg-kitchen.jpg");
-    background-size: cover; }
+    background-size: cover;
+    background-position: center; }
   .testimonials .testimonials-text-wrapper {
     background-color: #839CAB;
     height: 100%;

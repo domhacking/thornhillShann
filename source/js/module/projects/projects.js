@@ -73,34 +73,50 @@ module.exports = Module.extend({
         var projectsArray = document.querySelectorAll(".project");
         var closeButton = document.querySelector('.close-popup');
 
-        for(var i=0; i< projectsArray.length; i++) {
-            (function(index){
-                projectsArray[index].addEventListener("click", function(){
-                    this.classList.toggle('lightboxActive');
-                    var that = this;
 
-                    // scrollMagicActivation();
+        $('.project').click(function () {
+            $(this).toggle('lightboxActive');
+            var i = $(this)
+
+            // var bodyVariable = $('.body').css("overflow", "hidden");
+            // console.log(bodyVariable.style);
+            // bodyVariable.style.overflow = "hidden";
+        });
+
+        // $('.close-popup').click(function(){
+                // console.log(this);
+        //  $('.project').removeClass('lightboxActive');
+        //     body.style.overflow = "auto";
+        // })
 
 
+        // for(var i=0; i< projectsArray.length; i++) {
+        //     (function(index){
+        //         projectsArray[index].addEventListener("click", function(){
+        //             this.classList.toggle('lightboxActive');
+        //             var that = this;
+        //
+        //             // scrollMagicActivation();
+        //
+        //
+        //
+        //             closeButton.addEventListener("click", function(){
+        //                 this.classList.remove('lightboxActive');
+        //                 console.log(that);
+        //                 // that.classList.remove('lightboxActive');
+        //             })
+        //         });
+        //     })(i);
+        // }
 
-                    closeButton.addEventListener("click", function(){
-                        this.classList.remove('lightboxActive');
-                        console.log(that);
-                        // that.classList.remove('lightboxActive');
-                    })
-                });
-            })(i);
-        }
     },
 
 
 
     oninit: function(){
         this.on('close', this.onClose);
-
         this.on('information', this.onInformation);
-        // this.on('projectClick1', this.onProjectTwoClick);
-        // this.on('projectClick2', this.onProjectThreeClick);
+        this.on('projectClick', this.onProjectClick);
     },
 
 
@@ -121,14 +137,18 @@ module.exports = Module.extend({
 
     onInformation: function(){
         var popupPanel = document.querySelector('.popup__panel');
-        console.log(popupPanel);
+        // console.log(popupPanel);
         popupPanel.classList.toggle('activate-panel');
+    },
 
+    onProjectClick:function(){
+        this.set('lightboxActive', true);
     },
 
 
 
     onClose: function(){
+
 
         // document.get
         // this.toggle("projectLightbox", true)
