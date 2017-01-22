@@ -43682,7 +43682,7 @@ module.exports = Ractive.extend({
 });
 
 },{"ractive":6}],13:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"footer section container-fluid","id":"contact"},"f":[{"t":7,"e":"a","a":{"href":"#home","class":"scroll-to-top"}}," ",{"t":7,"e":"div","a":{"class":"row"},"f":[{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"footer-logo-container"},"f":[{"t":7,"e":"div","a":{"class":"logo"}}]}]}," ",{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"contact-details-container"},"f":[{"t":7,"e":"p","f":["Thornhill Shann Construction Limited"]}," ",{"t":7,"e":"p","f":["61A Greenwood Road, London, E8 1NT"]}," ",{"t":7,"e":"p","f":["Company Number: 10456724"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"mailto:contact@thornhillshann.co.uk"},"f":["contact@thornhillshann.co.uk"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"tel:02036542358"},"f":["0203 654 2358"]}]}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"footer section container-fluid","id":"contact"},"f":[{"t":7,"e":"a","a":{"href":"#home","class":"scroll-to-top"}}," ",{"t":7,"e":"div","a":{"class":"row"},"f":[{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"footer-logo-container"},"f":[{"t":7,"e":"div","a":{"class":"logo"}}]}]}," ",{"t":7,"e":"div","a":{"class":"col-md-6 padding-right-footer"},"f":[{"t":7,"e":"div","a":{"class":"contact-details"},"f":[{"t":7,"e":"div","a":{"class":"contact-details-inner"},"f":[{"t":7,"e":"p","a":{"class":"footer-company-name"},"f":["Thornhill Shann Construction Limited"]}," ",{"t":7,"e":"p","f":["61A Greenwood Road, London, E8 1NT"]}," ",{"t":7,"e":"p","f":["Company Number: 10456724"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"mailto:contact@thornhillshann.co.uk"},"f":["contact@thornhillshann.co.uk"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"tel:02036542358"},"f":["0203 654 2358"]}," ",{"t":7,"e":"ul","a":{"class":"social-icons-container"},"f":[{"t":7,"e":"li","a":{"class":"social-icon social-icon--facebook"},"f":[{"t":7,"e":"a","a":{"href":"http://www.instagram.com/","target":"_blank"}}]}," ",{"t":7,"e":"li","a":{"class":"social-icon social-icon--instagram"},"f":[{"t":7,"e":"a","a":{"href":"http://www.facebook.com/","target":"_blank"}}]}," ",{"t":7,"e":"li","a":{"class":"social-icon social-icon--twitter"},"f":[{"t":7,"e":"a","a":{"href":"http://www.facebook.com/","target":"_blank"}}]}," ",{"t":7,"e":"li","a":{"class":"social-icon social-icon--linkedin"},"f":[{"t":7,"e":"a","a":{"href":"http://www.facebook.com/","target":"_blank"}}]}]}]}]}]}]}]}]}
 },{}],14:[function(require,module,exports){
 /**
  * @module:   footer
@@ -43700,7 +43700,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":12,"./footer.html":13}],15:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"home section","id":"home"},"f":[" ",{"t":7,"e":"h1","a":{"class":"logo"},"f":["Thornhill Shann"]}," ",{"t":7,"e":"a","a":{"class":"home__scroll-button","href":"#about"}}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"home section","id":"home"},"f":[" ",{"t":7,"e":"div","a":{"class":"logo-container"},"f":[{"t":7,"e":"h1","a":{"class":"logo"}}]}," ",{"t":7,"e":"a","a":{"class":"home__scroll-button","href":"#about"}}]}]}
 },{}],16:[function(require,module,exports){
 /**
  * @module:   home
@@ -43733,7 +43733,7 @@ Ractive.components['ui-testimonials'] = require('./testimonials/testimonials.js'
 module.exports = Ractive;
 
 },{"./about/about.js":11,"./footer/footer.js":14,"./home/home.js":16,"./nav/nav.js":19,"./offer/offer.js":21,"./preload/preload.js":23,"./projects/projects.js":25,"./team/team.js":27,"./testimonials/testimonials.js":29,"ractive":6}],18:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"nav"},"f":[{"t":7,"e":"div","a":{"class":["burger-container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"active-burger\":\" \""}}]},"v":{"click":"burger"},"f":[{"t":7,"e":"span","a":{"class":"burger-bar"}}]}," ",{"t":7,"e":"div","a":{"class":"logo"},"f":[{"t":7,"e":"a","a":{"href":"#home"},"f":[{"t":7,"e":"img","a":{"src":"img/nav-logo--white.png","alt":""}}]}]}," ",{"t":7,"e":"div","a":{"class":["nav-item-wrapper ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"active-nav\":\" \""}}]},"f":[{"t":7,"e":"ul","a":{"id":"navMenu","class":"nav-item-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"nav-item"},"f":[{"t":7,"e":"a","a":{"href":["#",{"t":2,"r":"dataAnchor"}],"class":"nav-underline"},"v":{"click":"removeWrapper"},"f":[{"t":2,"r":"navItem"}]}]}],"n":52,"r":"nav"}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":["nav ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"active-nav\":\" \""}}]},"f":[{"t":7,"e":"div","a":{"class":["burger-container ",{"t":2,"x":{"r":["expanded"],"s":"_0?\"active-burger\":\" \""}}]},"v":{"click":"burger"},"f":[{"t":7,"e":"span","a":{"class":"burger-bar"}}]}," ",{"t":7,"e":"div","a":{"class":"logo"},"f":[{"t":7,"e":"a","a":{"href":"#home"},"f":[{"t":7,"e":"img","a":{"src":"img/nav-logo--white.png","alt":""}}]}]}," ",{"t":7,"e":"div","a":{"class":"nav-item-wrapper"},"f":[{"t":7,"e":"ul","a":{"id":"navMenu","class":"nav-item-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"nav-item"},"f":[{"t":7,"e":"a","a":{"href":["#",{"t":2,"r":"dataAnchor"}],"class":"nav-underline"},"v":{"click":"removeWrapper"},"f":[{"t":2,"r":"navItem"}]}]}],"n":52,"r":"nav"}]}]}]}]}
 },{}],19:[function(require,module,exports){
 /**
 * @module:   nav
@@ -43823,7 +43823,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":12,"./nav.html":18,"jquery":5}],20:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"offer section","id":"offer"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["What we offer"]}," ",{"t":7,"e":"div","a":{"class":"offer-container"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":"offer-item"},"f":[{"t":7,"e":"img","a":{"class":"icon","src":[{"t":2,"r":"icon"}]}}," ",{"t":7,"e":"div","a":{"class":"offer-title"},"f":[{"t":2,"r":"offerTitle"}]}," ",{"t":7,"e":"div","a":{"class":"offer-description"},"f":[{"t":2,"r":"offerDescription"}]}]}],"n":52,"r":"offer"}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"offer section","id":"offer"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["What we offer"]}," ",{"t":7,"e":"div","a":{"class":"offer-container"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":"offer-item"},"f":[{"t":7,"e":"img","a":{"class":"icon","src":[{"t":2,"r":"icon"}]},"v":{"click":"testing"}}," ",{"t":7,"e":"div","a":{"class":"offer-title"},"f":[{"t":2,"r":"offerTitle"}]}," ",{"t":7,"e":"div","a":{"class":"offer-description"},"f":[{"t":2,"r":"offerDescription"}]}]}],"n":52,"r":"offer"}]}]}]}
 },{}],21:[function(require,module,exports){
 /**
  * @module:   offer
@@ -43873,7 +43873,17 @@ module.exports = Module.extend({
           }
       ]
 
-  }
+  },
+
+  // oninit: function(){
+  //     this.on('testing', this.onTesting);
+  //
+  //
+  // },
+  //
+  // onTesting: function(){
+  //     console.log(this);
+  // }
 
 });
 
@@ -43903,7 +43913,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":12,"./preload.html":22,"jquery":5}],24:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"projects section","id":"projects"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["Projects"]}," ",{"t":7,"e":"div","a":{"class":"projectsCarousel"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":["project project--",{"t":2,"r":"class"}]},"v":{"click":"projectClick"},"f":[{"t":7,"e":"div","a":{"class":"project-content-wrapper"},"f":[{"t":7,"e":"div","a":{"class":"project-content-container"},"f":[{"t":7,"e":"h3","a":{"class":"project__name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"p","a":{"class":"project__location"},"f":[{"t":2,"r":"location"}]}]}]}," ",{"t":7,"e":"div","a":{"class":"projectLightBox"},"f":[{"t":7,"e":"div","a":{"class":"close-popup"},"f":["X"]}," ",{"t":7,"e":"div","a":{"class":"row row-project"},"f":[{"t":7,"e":"div","a":{"class":"popup-image-wrapper col-md-8"},"f":[{"t":7,"e":"div","a":{"class":"project-images-container"},"f":[{"t":7,"e":"div","a":{"id":"pinContainer"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":["project-image project-image",{"t":2,"r":"i"}],"style":["background-image:url(",{"t":2,"r":"."},")"]}}],"n":52,"i":"i","r":"images"}]}]}]}," ",{"t":7,"e":"div","a":{"class":"popup__panel-wrapper col-md-4"},"f":[{"t":7,"e":"div","a":{"class":"info-icon"},"v":{"click":"information"},"f":["i"]}," ",{"t":7,"e":"div","a":{"class":"popup__panel"},"f":[{"t":7,"e":"div","a":{"class":"popup__content-wrapper"},"f":[{"t":7,"e":"div","a":{"class":"popup__location"},"f":[{"t":2,"r":"location"}]}," ",{"t":7,"e":"div","a":{"class":"popup__name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"hr","a":{"class":"gold-line"}}," ",{"t":7,"e":"div","a":{"class":"popup__headings-container"},"f":[{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Client:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Project Type:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Sq ft:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Project Value:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Services:"]}]},{"t":7,"e":"div","a":{"class":"popup__content-container"},"f":[{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"client"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"architect"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"structural"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"price"}]}," ",{"t":7,"e":"ul","a":{"class":"popup__content popup__content--list-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"popup__content popup__content--list-item"},"f":[{"t":2,"r":"."}]}],"n":52,"r":"features"}]}]}," ",{"t":7,"e":"hr","a":{"class":"gold-line"}}," ",{"t":7,"e":"div","a":{"class":"popup__content popup__content--description"},"f":[{"t":2,"r":"description"}]}]}]}]}]}," "]}]}],"n":52,"i":"i","r":"projects"}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"projects section","id":"projects"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading"},"f":["Projects"]}," ",{"t":7,"e":"div","a":{"class":"projectsCarousel"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":["project project--",{"t":2,"r":"class"}]},"f":[{"t":7,"e":"div","a":{"class":"project-content-wrapper"},"f":[{"t":7,"e":"div","a":{"class":"project-content-container"},"f":[{"t":7,"e":"h3","a":{"class":"project__name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"p","a":{"class":"project__location"},"f":[{"t":2,"r":"location"}]}]}]}," ",{"t":7,"e":"div","a":{"class":"projectLightBox"},"f":[{"t":7,"e":"div","a":{"class":"close-popup"},"f":["X"]}," ",{"t":7,"e":"div","a":{"class":"popup-hover-area"},"f":[{"t":7,"e":"div","a":{"class":"info-icon"},"v":{"click":"information"},"f":["i"]}," ",{"t":7,"e":"div","a":{"class":"popup__panel"},"f":[{"t":7,"e":"div","a":{"class":"popup__content-wrapper"},"f":[{"t":7,"e":"div","a":{"class":"popup__location"},"f":[{"t":2,"r":"location"}]}," ",{"t":7,"e":"div","a":{"class":"popup__name"},"f":[{"t":2,"r":"name"}]}," ",{"t":7,"e":"hr","a":{"class":"gold-line"}}," ",{"t":7,"e":"div","a":{"class":"popup__headings-container"},"f":[{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Client:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Project Type:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Sq ft:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Project Value:"]}," ",{"t":7,"e":"p","a":{"class":"popup__sub-heading"},"f":["Services:"]}]},{"t":7,"e":"div","a":{"class":"popup__content-container"},"f":[{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"client"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"architect"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"structural"}]}," ",{"t":7,"e":"div","a":{"class":"popup__content"},"f":[{"t":2,"r":"price"}]}," ",{"t":7,"e":"ul","a":{"class":"popup__content popup__content--list-container"},"f":[{"t":4,"f":[{"t":7,"e":"li","a":{"class":"popup__content popup__content--list-item"},"f":[{"t":2,"r":"."}]}],"n":52,"r":"features"}]}]}," ",{"t":7,"e":"hr","a":{"class":"gold-line"}}," ",{"t":7,"e":"div","a":{"class":"popup__content popup__content--description"},"f":[{"t":2,"r":"description"}]}]}]}]}," ",{"t":7,"e":"div","a":{"class":"project-images-container"},"f":[{"t":4,"f":[{"t":7,"e":"div","a":{"class":["project-image project-image",{"t":2,"r":"i"}],"style":["background-image:url(",{"t":2,"r":"."},")"]}}],"n":52,"i":"i","r":"images"}]}]}]}],"n":52,"i":"i","r":"projects"}]}]}," "]}
 },{}],25:[function(require,module,exports){
 /**
 * @module:   projects
@@ -43929,7 +43939,7 @@ module.exports = Module.extend({
                 name: "Brook Green",
                 imageHero:"../img/bg-sittingRoom.jpg",
                 imageNumber:"1",
-                images: ["../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg"],
+                images: ["../img/bg-sittingRoom.jpg", "../img/bg-kitchenAndSittingRoom.jpg", "../img/bg-kitchenAndSittingRoom2.jpg"],
                 client: "Private",
                 architect : "Delta Architects",
                 structural : "Elliot Wood",
@@ -43943,7 +43953,7 @@ module.exports = Module.extend({
                 name: "Hackney",
                 imageHero:"../img/bg-sittingRoom.jpg",
                 imageNumber:"1",
-                images: ["../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg"],
+                images: ["../img/bg-sittingRoom.jpg", "../img/bg-kitchenAndSittingRoom.jpg", "../img/bg-kitchenAndSittingRoom2.jpg"],
                 client: "Private",
                 architect : "Delta Architects",
                 structural : "Elliot Wood",
@@ -43957,7 +43967,7 @@ module.exports = Module.extend({
                 class:"chelsea",
                 imageHero:"../img/bg-sittingRoom.jpg",
                 imageNumber:"1",
-                images: ["../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg"],
+                images: ["../img/bg-sittingRoom.jpg", "../img/bg-kitchenAndSittingRoom.jpg", "../img/bg-kitchenAndSittingRoom2.jpg"],
                 client: "Private",
                 architect : "Delta Architects",
                 structural : "Elliot Wood",
@@ -43974,21 +43984,30 @@ module.exports = Module.extend({
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
-            arrows: true
+            arrows: true,
+            responsive: [
+                {
+                  breakpoint: 530,
+                  settings: 'unslick'
+                },
+              ]
         });
 
         var projectsArray = document.querySelectorAll(".project");
+
         var closeButton = document.querySelector('.close-popup');
+        var bodyButton = document.querySelector('.body');
+        console.log(bodyButton);
 
 
-        $('.project').click(function () {
-            $(this).toggle('lightboxActive');
-            var i = $(this)
+        // $('.project').click(function () {
+            // $(this).toggle('lightboxActive');
+            // var i = $(this)
 
             // var bodyVariable = $('.body').css("overflow", "hidden");
             // console.log(bodyVariable.style);
             // bodyVariable.style.overflow = "hidden";
-        });
+        // });
 
         // $('.close-popup').click(function(){
                 // console.log(this);
@@ -43997,32 +44016,27 @@ module.exports = Module.extend({
         // })
 
 
-        // for(var i=0; i< projectsArray.length; i++) {
-        //     (function(index){
-        //         projectsArray[index].addEventListener("click", function(){
-        //             this.classList.toggle('lightboxActive');
-        //             var that = this;
-        //
-        //             // scrollMagicActivation();
-        //
-        //
-        //
-        //             closeButton.addEventListener("click", function(){
-        //                 this.classList.remove('lightboxActive');
-        //                 console.log(that);
-        //                 // that.classList.remove('lightboxActive');
-        //             })
-        //         });
-        //     })(i);
-        // }
+        for(var i=0; i< projectsArray.length; i++) {
+            (function(index){
+                projectsArray[index].addEventListener("click", function(){
+                    this.classList.toggle('lightboxActive');
+                    bodyButton.classList.toggle('noScroll');
+                    var that = this;
+
+                    closeButton.addEventListener("click", function(){
+                        this.classList.remove('lightboxActive');
+                        console.log(that);
+                        // that.classList.remove('lightboxActive');
+                    })
+                });
+            })(i);
+        }
 
     },
 
 
 
     oninit: function(){
-        this.on('close', this.onClose);
-        this.on('information', this.onInformation);
         this.on('projectClick', this.onProjectClick);
     },
 
@@ -44046,10 +44060,12 @@ module.exports = Module.extend({
         var popupPanel = document.querySelector('.popup__panel');
         // console.log(popupPanel);
         popupPanel.classList.toggle('activate-panel');
+
     },
 
     onProjectClick:function(){
-        this.set('lightboxActive', true);
+        // this.set('lightboxActive', true);
+        console.log(body);
     },
 
 
@@ -44116,7 +44132,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":12,"./team.html":26}],28:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"testimonials section container-fluid","id":"testimonials"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading section-heading--teal "},"f":["Testimonials"]}," ",{"t":7,"e":"div","a":{"class":"row testimonials-row"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-wrapper col-lg-4 col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-container"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-content"},"f":[{"t":7,"e":"h3","a":{"class":"testimonials-title"},"f":["Gail - Chelsea"]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"p","a":{"class":"testimonials-quote"},"f":["\"Over the moon with our flat, Thornhill Shann made renovating with a newborn baby easier than we could have ever hoped for\""]}]}]}]}," ",{"t":7,"e":"div","a":{"class":"col-lg-8 col-md-6 testimonials-parent","id":"parallax2"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-img"}}]}]}," ",{"t":7,"e":"div","a":{"class":"row testimonials-row"},"f":[{"t":7,"e":"div","a":{"class":"col-lg-8 col-md-6 testimonials-parent","id":"parallax3"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-img"}}]}," ",{"t":7,"e":"div","a":{"class":"testimonials-text-wrapper col-lg-4 col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-container"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-content"},"f":[{"t":7,"e":"h3","a":{"class":"testimonials-title"},"f":["Chloe - Hackney"]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"p","a":{"class":"testimonials-quote"},"f":["\"Tom's attention to detail and enthusiasm ensured the works were finished to an exceptionally high standard and most importantly on budget\""]}]}]}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"testimonials section container-fluid","id":"testimonials"},"f":[{"t":7,"e":"h2","a":{"class":"section-heading section-heading--teal "},"f":["Testimonials"]}," ",{"t":7,"e":"div","a":{"class":"row testimonials-row"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-wrapper col-lg-4 col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-container"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-content"},"f":[{"t":7,"e":"h3","a":{"class":"testimonials-title"},"f":["Gail - Chelsea"]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"p","a":{"class":"testimonials-quote"},"f":["\"Over the moon with our flat, Thornhill Shann made renovating with a newborn baby easier than we could have ever hoped for\""]}]}]}]}," ",{"t":7,"e":"div","a":{"class":"col-lg-8 col-md-6 testimonials-parent","id":"parallax2"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-img testimonials-img--chelsea"}}]}]}," ",{"t":7,"e":"div","a":{"class":"row testimonials-row"},"f":[{"t":7,"e":"div","a":{"class":"col-lg-8 col-md-6 testimonials-parent","id":"parallax3"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-img testimonials-img--hackney"}}]}," ",{"t":7,"e":"div","a":{"class":"testimonials-text-wrapper col-lg-4 col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-container"},"f":[{"t":7,"e":"div","a":{"class":"testimonials-text-content"},"f":[{"t":7,"e":"h3","a":{"class":"testimonials-title"},"f":["Chloe - Hackney"]}," ",{"t":7,"e":"div","a":{"class":"dash"}}," ",{"t":7,"e":"p","a":{"class":"testimonials-quote"},"f":["\"Tom's attention to detail and enthusiasm ensured the works were finished to an exceptionally high standard and most importantly on budget\""]}]}]}]}]}]}]}
 },{}],29:[function(require,module,exports){
 /**
  * @module:   testimonials
@@ -44154,12 +44170,13 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":12,"./testimonials.html":28}],30:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"ui-preload"}," ",{"t":7,"e":"ui-nav"}," ",{"t":7,"e":"div","a":{"id":"","class":"sections-container"},"f":[{"t":7,"e":"ui-home"}," ",{"t":7,"e":"ui-about"}," ",{"t":7,"e":"ui-team"}," ",{"t":7,"e":"ui-projects"}," ",{"t":7,"e":"ui-offer"}," ",{"t":7,"e":"ui-testimonials"}," ",{"t":7,"e":"ui-footer"}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"ui-nav"}," ",{"t":7,"e":"div","a":{"class":"sections-container"},"f":[{"t":7,"e":"ui-home"}," ",{"t":7,"e":"ui-about"}," ",{"t":7,"e":"ui-team"}," ",{"t":7,"e":"ui-projects"}," ",{"t":7,"e":"ui-offer"}," ",{"t":7,"e":"ui-testimonials"}," ",{"t":7,"e":"ui-footer"}]}]}
 },{}],31:[function(require,module,exports){
 var Ractive = require('../module');
 var $ = require("jquery");
 var ScrollMagic = require("scrollmagic");
 require('scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap');
+// require('scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators');
 var gsap = require("gsap");
 // var fullpage = require('fullpage.js');
 
@@ -44186,41 +44203,21 @@ module.exports = function() {
 
         var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
-        console.log(controller);
 
         new ScrollMagic.Scene({triggerElement: "#parallax1"})
-					.setTween("#parallax1 > div", {y: "80%"})
-					.addTo(controller);
+			.setTween("#parallax1 > div", {y: "80%"})
+			.addTo(controller);
 
         new ScrollMagic.Scene({triggerElement: "#parallax2"})
-					.setTween("#parallax2 > div", {y: "60%"})
-					.addTo(controller);
+			.setTween("#parallax2 > div", {y: "60%"})
+			.addTo(controller);
 
 	    new ScrollMagic.Scene({triggerElement: "#parallax3"})
-					.setTween("#parallax3 > div", {y: "60%"})
-					.addTo(controller);
+			.setTween("#parallax3 > div", {y: "60%"})
+			.addTo(controller);
 
-        var wipeAnimation = new TimelineMax()
-        			.fromTo("activeImage.image0", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-        			.fromTo("activeImage.image1", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})  // in from left
-        			.fromTo("activeImage.image2", 1, {x:  "100%"}, {x: "0%", ease: Linear.easeNone})  // in from right
-        			.fromTo("activeImage.image3", 1, {y: "-100%"}, {y: "0%", ease: Linear.easeNone}); // in from top
-
-            		// create scene to pin and link animation
-            		new ScrollMagic.Scene({
-            				triggerElement: "#pinContainer",
-            				triggerHook: "onLeave",
-            				duration: "300%"
-            			})
-            			.setPin("#pinContainer")
-            			.setTween(wipeAnimation)
-            			.addTo(controller);
 
     },
-
-
-
-
 
   });
 

@@ -46,6 +46,16 @@ module.exports = Module.extend({
           }
       ]
 
-  }
+  },
+
+  // oninit: function(){
+  //     this.on('testing', this.onTesting);
+  //
+  //
+  // },
+  //
+  // onTesting: function(){
+  //     console.log(this);
+  // }
 
 });

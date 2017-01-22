@@ -8,7 +8,7 @@
     <h2 class="section-heading">Projects</h2>
     <div class="projectsCarousel">
         {{#each projects:i}}
-            <div class="project project--{{class}}" on-click="projectClick">
+            <div class="project project--{{class}}">
                 <div class="project-content-wrapper">
                     <div class="project-content-container">
                         <h3 class="project__name">{{name}}</h3>
@@ -17,61 +17,55 @@
                 </div>
                 <div class="projectLightBox">
                     <div class="close-popup">X</div>
-                    <div class="row row-project">
+                    <div class="popup-hover-area">
+                        <div class="info-icon" on-click="information">i</div>
+                        <div class="popup__panel">
+                            <div class="popup__content-wrapper">
+                                <div class="popup__location">{{location}}</div>
+                                <div class="popup__name">{{name}}</div>
 
-                        <div class="popup-image-wrapper col-md-8">
-                            <div class="project-images-container">
-                                <div id="pinContainer">
-                                    {{#each images:i}}
-                                    <div class="project-image project-image{{i}}" style="background-image:url({{this}})"></div>
-                                    {{/each}}
+                                <hr class="gold-line">
+
+                                <div class="popup__headings-container">
+                                    <p class="popup__sub-heading">Client:</p>
+                                    <p class="popup__sub-heading">Project Type:</p>
+                                    <p class="popup__sub-heading">Sq ft:</p>
+                                    <p class="popup__sub-heading">Project Value:</p>
+                                    <p class="popup__sub-heading">Services:</p>
+                                </div><!--
+                             --><div class="popup__content-container">
+                                    <div class="popup__content">{{client}}</div>
+                                    <div class="popup__content">{{architect}}</div>
+                                    <div class="popup__content">{{structural}}</div>
+                                    <div class="popup__content">{{price}}</div>
+                                    <ul class="popup__content popup__content--list-container">
+                                        {{#each features}}
+                                        <li class="popup__content popup__content--list-item">{{this}}</li>
+                                        {{/each}}
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="popup__panel-wrapper col-md-4">
-                            <div class="info-icon" on-click="information">i</div>
-                            <div class="popup__panel">
-                                <div class="popup__content-wrapper">
-                                    <div class="popup__location">{{location}}</div>
-                                    <div class="popup__name">{{name}}</div>
 
-                                    <hr class="gold-line">
+                                <hr class="gold-line">
 
-                                    <div class="popup__headings-container">
-                                        <p class="popup__sub-heading">Client:</p>
-                                        <p class="popup__sub-heading">Project Type:</p>
-                                        <p class="popup__sub-heading">Sq ft:</p>
-                                        <p class="popup__sub-heading">Project Value:</p>
-                                        <p class="popup__sub-heading">Services:</p>
-                                    </div><!--
-                                    --><div class="popup__content-container">
-                                        <div class="popup__content">{{client}}</div>
-                                        <div class="popup__content">{{architect}}</div>
-                                        <div class="popup__content">{{structural}}</div>
-                                        <div class="popup__content">{{price}}</div>
-                                        <ul class="popup__content popup__content--list-container">
-                                            {{#each features}}
-                                            <li class="popup__content popup__content--list-item">{{this}}</li>
-                                            {{/each}}
-                                        </ul>
-                                    </div>
-
-                                    <hr class="gold-line">
-
-                                    <div class="popup__content popup__content--description">{{description}}</div>
-                                </div>
+                                <div class="popup__content popup__content--description">{{description}}</div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="slider__next slider" on-click='goto:{{current + 1}}'></div>
-                    {{#each images}}
-                        <div class="activeImage"><img src="../img/img-{{location}}-{{current}}.jpg" alt=""></div>
-                    {{/each}}
-                    div.
-                    <div class="slider__prev {{lightBox ? 'slider' : 'displayNone'}}" on-click='goto:{{current - 1}}'></div>
-                    <div class="">POP UP</div> -->
+
+                    <div class="project-images-container">
+                        {{#each images:i}}
+                            <div class="project-image project-image{{i}}" style="background-image:url({{this}})"></div>
+                        {{/each}}
+                    </div>
                 </div>
             </div>
         {{/each}}
     </div>
 </div>
+
+
+                <!-- </div>
+            </div>
+        {{/each}}
+    </div>
+</div> -->

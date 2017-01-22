@@ -22,7 +22,7 @@ module.exports = Module.extend({
                 name: "Brook Green",
                 imageHero:"../img/bg-sittingRoom.jpg",
                 imageNumber:"1",
-                images: ["../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg"],
+                images: ["../img/bg-sittingRoom.jpg", "../img/bg-kitchenAndSittingRoom.jpg", "../img/bg-kitchenAndSittingRoom2.jpg"],
                 client: "Private",
                 architect : "Delta Architects",
                 structural : "Elliot Wood",
@@ -36,7 +36,7 @@ module.exports = Module.extend({
                 name: "Hackney",
                 imageHero:"../img/bg-sittingRoom.jpg",
                 imageNumber:"1",
-                images: ["../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg"],
+                images: ["../img/bg-sittingRoom.jpg", "../img/bg-kitchenAndSittingRoom.jpg", "../img/bg-kitchenAndSittingRoom2.jpg"],
                 client: "Private",
                 architect : "Delta Architects",
                 structural : "Elliot Wood",
@@ -50,7 +50,7 @@ module.exports = Module.extend({
                 class:"chelsea",
                 imageHero:"../img/bg-sittingRoom.jpg",
                 imageNumber:"1",
-                images: ["../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg", "../img/bg-sittingRoom.jpg"],
+                images: ["../img/bg-sittingRoom.jpg", "../img/bg-kitchenAndSittingRoom.jpg", "../img/bg-kitchenAndSittingRoom2.jpg"],
                 client: "Private",
                 architect : "Delta Architects",
                 structural : "Elliot Wood",
@@ -67,21 +67,30 @@ module.exports = Module.extend({
             slidesToShow: 3,
             slidesToScroll: 1,
             autoplay: true,
-            arrows: true
+            arrows: true,
+            responsive: [
+                {
+                  breakpoint: 530,
+                  settings: 'unslick'
+                },
+              ]
         });
 
         var projectsArray = document.querySelectorAll(".project");
+
         var closeButton = document.querySelector('.close-popup');
+        var bodyButton = document.querySelector('.body');
+        console.log(bodyButton);
 
 
-        $('.project').click(function () {
-            $(this).toggle('lightboxActive');
-            var i = $(this)
+        // $('.project').click(function () {
+            // $(this).toggle('lightboxActive');
+            // var i = $(this)
 
             // var bodyVariable = $('.body').css("overflow", "hidden");
             // console.log(bodyVariable.style);
             // bodyVariable.style.overflow = "hidden";
-        });
+        // });
 
         // $('.close-popup').click(function(){
                 // console.log(this);
@@ -90,32 +99,27 @@ module.exports = Module.extend({
         // })
 
 
-        // for(var i=0; i< projectsArray.length; i++) {
-        //     (function(index){
-        //         projectsArray[index].addEventListener("click", function(){
-        //             this.classList.toggle('lightboxActive');
-        //             var that = this;
-        //
-        //             // scrollMagicActivation();
-        //
-        //
-        //
-        //             closeButton.addEventListener("click", function(){
-        //                 this.classList.remove('lightboxActive');
-        //                 console.log(that);
-        //                 // that.classList.remove('lightboxActive');
-        //             })
-        //         });
-        //     })(i);
-        // }
+        for(var i=0; i< projectsArray.length; i++) {
+            (function(index){
+                projectsArray[index].addEventListener("click", function(){
+                    this.classList.toggle('lightboxActive');
+                    bodyButton.classList.toggle('noScroll');
+                    var that = this;
+
+                    closeButton.addEventListener("click", function(){
+                        this.classList.remove('lightboxActive');
+                        console.log(that);
+                        // that.classList.remove('lightboxActive');
+                    })
+                });
+            })(i);
+        }
 
     },
 
 
 
     oninit: function(){
-        this.on('close', this.onClose);
-        this.on('information', this.onInformation);
         this.on('projectClick', this.onProjectClick);
     },
 
@@ -139,10 +143,12 @@ module.exports = Module.extend({
         var popupPanel = document.querySelector('.popup__panel');
         // console.log(popupPanel);
         popupPanel.classList.toggle('activate-panel');
+
     },
 
     onProjectClick:function(){
-        this.set('lightboxActive', true);
+        // this.set('lightboxActive', true);
+        console.log(body);
     },
 
 

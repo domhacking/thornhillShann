@@ -29,18 +29,20 @@
     }
 
     .testimonials-img{
-        // height: 100%;
         height: 200%;
         position: relative;
         top: -100%;
         margin: 0;
-        background-image: url('../img/bg-kitchen.jpg');
         background-size: cover;
         background-position: center;
-        // background-size: cover;
-        // background-position: center;
-        // background-position: 0 0;
-        // background-repeat: no-repeat;
+
+        &--chelsea{
+            background-image: url('../img/bg-kitchen.jpg');
+        }
+
+        &--hackney{
+            background-image: url('../img/bg-kitchenAndSittingRoom.jpg');
+        }
     }
 
     .testimonials-text-wrapper{
@@ -77,18 +79,45 @@
         line-height: 2;
     }
 
-    @media #{$viewport-mobile}{
+    @media #{$viewport-tablet}{
+        #parallax2{
+            display: none;
+        }
+
+
         .testimonials-row{
             height: auto;
         }
 
+        .testimonials-text-container{
+            height: auto;
+            display: block;
+        }
+
         .testimonials-text-content{
             position: relative;
+            height: auto;
+            display: block;
+            top: auto;
+            left: auto;
+            transform: none;
+            padding: 20px 50px;
         }
 
         .testimonials-img{
-            height: 100vw
+            height: 50vw;
+            transform: none !important;
+            // display: none;
         }
+
+    }
+
+    @media #{$viewport-tablet}{
+        .testimonials-text-content{
+            padding: 20px 10px;
+        }
+
+
 
     }
 }

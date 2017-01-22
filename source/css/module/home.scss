@@ -11,17 +11,16 @@
     background-position: center;
 
     .logo{
-        // text-indent: 150%;
-        overflow: hidden;
-        white-space: nowrap;
         background-image: url("../img/ts-logo--white.png");
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
         height: 50%;
-        width: auto;
+        width: 100%;
+        max-width: 500px;
+        margin: 20px;
         position: absolute;
-        top: 50%;
+        top: 52%;
         left: 50%;
         transform: translate(-50%, -50%);
     }

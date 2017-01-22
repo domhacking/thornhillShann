@@ -8,4 +8,6 @@ $break-large : 1024px;
 
 $viewport-wide-screen: 'screen and (min-width: 1450px)';
 $viewport-tablet-only: 'screen and (min-width: 768px) and (max-width: 1100px)';
-$viewport-mobile: 'screen and (max-width: 780px)';
+$viewport-tablet: 'screen and (max-width: 1100px)';
+$viewport-mobile: 'screen and (max-width: 768px)';
+$viewport-small-mobile: 'screen and (max-width: 550px)';

@@ -4,7 +4,7 @@
 @js:       ./source/js/module/nav/nav.js
 -->
 
-<div class="nav">
+<div class="nav {{expanded ? 'active-nav': ' '}}">
     <div class="burger-container {{expanded ? 'active-burger': ' '}}" on-click="burger">
         <span class="burger-bar"></span>
     </div>
@@ -15,7 +15,7 @@
         </a>
     </div>
 
-    <div class="nav-item-wrapper {{expanded ? 'active-nav': ' '}}">
+    <div class="nav-item-wrapper">
         <ul id="navMenu" class="nav-item-container">
             {{#each nav}}
             <li class="nav-item">

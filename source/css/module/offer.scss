@@ -41,4 +41,18 @@
     .offer-description{
         font-size: 13px;
     }
+
+    @media #{$viewport-tablet-only}{
+        .offer-item{
+            width: 50%;
+        }
+    }
+    @media #{$viewport-mobile}{
+        .offer-item{
+            width: 100%;
+        }
+
+    }
+
+
 }

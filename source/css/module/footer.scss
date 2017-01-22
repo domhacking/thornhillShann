@@ -1,18 +1,19 @@
 /**
- * @module:   footer
- * @js:       ./source/js/module/footer/footer.js
- * @html:     ./source/js/module/footer/footer.html
- */
+* @module:   footer
+* @js:       ./source/js/module/footer/footer.js
+* @html:     ./source/js/module/footer/footer.html
+*/
 
 
 @include module("footer") {
-      height: auto;
-      background-color: $teal;
-      position: relative;
+    height: auto;
+    background-color: $teal;
+    position: relative;
 
-      .footer-logo-container{
-          height: 300px;
-          padding: 50px;
+    .footer-logo-container{
+        height: 300px;
+        padding: 50px 0 20px;
+
 
         .logo{
             height: 100%;
@@ -21,43 +22,119 @@
             background-size: contain;
             background-repeat: no-repeat;
         }
-      }
+    }
 
-      .contact-details-container{
-          margin: 50px 50px 20px;
-          float: right;
+    .padding-right-footer{
+        padding-right: 0;
+    }
 
-          p{
-              line-height: 1.7;
-          }
-      }
+    .contact-details{
+        text-align: right;
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
 
-      .contact-links{
-          display: block;
-          color: $white;
-        //   transition: all 0.3s ease;
+    .contact-details-inner{
+        margin: 110px 20px 20px;
 
-          &:hover{
-              text-decoration: underline;
-          }
-      }
+        p{
+            line-height: 1.7;
+        }
+    }
 
-      .scroll-to-top{
-          position: absolute;
-          right: 20px;
-          top: 10px;
-          height: 45px;
-          width: 45px;
-          background: url('../img/footer-up-arrow.png');
-          background-size: contain;
-          transform: rotate(-90deg);
-          opacity: 1;
-          cursor: pointer;
-          z-index: 2;
+    .footer-company-name{
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 
-          &:hover{
-              opacity: 0.7;
-              transition: 0.3s opacity ease;
-          }
-      }
+    .contact-links{
+        display: block;
+        color: $white;
+        transition: all 0.3s ease;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .social-icons-container{
+        display: block;
+        margin: 10px 0;
+    }
+
+    .social-icon{
+        display: inline-block;
+        width: 28px;
+        height: 28px;
+        margin: 3px;
+        background-size: contain;
+
+
+        &--facebook{
+            background-image: url('../img/icon-facebook.png');
+        }
+        &--instagram{
+            background-image: url('../img/icon-instagram.png');
+        }
+        &--twitter{
+            background-image: url('../img/icon-twitter.png');
+        }
+        &--linkedin{
+            background-image: url('../img/icon-linkedin.png');
+        }
+
+        a{
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+
+        &:hover{
+            opacity: 0.7;
+            transition: 0.3s opacity ease;
+        }
+
+
+    }
+
+    .scroll-to-top{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        height: 45px;
+        width: 45px;
+        background: url('../img/footer-up-arrow.png');
+        background-size: contain;
+        transform: rotate(-90deg);
+        opacity: 1;
+        cursor: pointer;
+        z-index: 2;
+
+        &:hover{
+            opacity: 0.7;
+            transition: 0.3s opacity ease;
+        }
+    }
+
+    @media #{$viewport-mobile}{
+        .footer-logo-container{
+            width: 100%;
+        }
+
+        .logo{
+            background-position: center;
+        }
+
+        .contact-details{
+            text-align: center;
+        }
+        .contact-details-inner{
+            margin: 0 20px 50px;
+
+        }
+
+
+    }
 }

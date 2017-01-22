@@ -9,8 +9,15 @@ $inuit-base-line-height      : $font-line-height;
 $inuit-base-text-color       : $color-foreground;
 $inuit-base-background-color : $color-background;
 
+.noScroll{
+    overflow: hidden;
+}
 
 .sections-container{
+    height: 100%;
+}
+
+.main{
     height: 100%;
 }
 
@@ -36,4 +43,10 @@ $inuit-base-background-color : $color-background;
     border: $teal;
     width: 20%;
     margin: 10px auto 20px;
+}
+
+@media #{$viewport-mobile}{
+    .section-heading{
+        font-size: 24px;
+    }
 }
