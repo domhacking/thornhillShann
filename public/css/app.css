@@ -6338,6 +6338,13 @@ h1, h2, h3, h4, p {
 .main {
   height: 100%; }
 
+.loaded .preload {
+  opacity: 0; }
+
+.loaded .home .logo {
+  opacity: 1;
+  transition: opacity 1s 2.5s ease; }
+
 /* Slider */
 .slick-slider {
   position: relative;
@@ -6841,6 +6848,7 @@ h1, h2, h3, h4, p {
     position: absolute;
     top: 52%;
     left: 50%;
+    opacity: 0;
     -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%); }
   .home__scroll-button {
@@ -6930,7 +6938,9 @@ h1, h2, h3, h4, p {
   @media screen and (max-width: 768px) {
     .nav.nav {
       background-color: transparent;
-      z-index: 3; }
+      z-index: 3;
+      opacity: 1;
+      font-family: "Myriad Pro", serif !important; }
     .nav.active-nav {
       height: 100%; }
       .nav.active-nav .nav-item-wrapper {
@@ -7072,8 +7082,24 @@ h1, h2, h3, h4, p {
  * @js:       ./source/js/module/preload/preload.js
  * @html:     ./source/js/module/preload/preload.html
  */
-.preload.loaded {
-  opacity: 0; }
+.preload {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: #4A606D;
+  opacity: 1;
+  transition: opacity 1.5s 1s ease; }
+  .preload .preload__image {
+    height: 250px;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    position: absolute; }
 
 /**
  * @module:   projects
@@ -7122,6 +7148,7 @@ h1, h2, h3, h4, p {
     font-style: italic; }
   .projects .projectLightBox {
     opacity: 0;
+    display: none;
     transition: opacity 1s 0.2s ease; }
   .projects .lightboxActive .projectLightBox {
     position: fixed !important;
@@ -7138,7 +7165,6 @@ h1, h2, h3, h4, p {
     height: 100%;
     width: 100%; }
   .projects .project-image {
-    background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     height: 100%;

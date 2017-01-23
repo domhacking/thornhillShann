@@ -19,3 +19,16 @@ h1,h2,h3,h4,p{
 .main{
     height: 100%;
 }
+
+.loaded{
+    .preload{
+        opacity: 0;
+    }
+    
+    .home{
+        .logo{
+            opacity: 1;
+            transition: opacity 1s 2.5s ease;
+        }
+    }
+}

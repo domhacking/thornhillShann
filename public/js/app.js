@@ -43682,7 +43682,7 @@ module.exports = Ractive.extend({
 });
 
 },{"ractive":6}],13:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"footer section container-fluid","id":"contact"},"f":[{"t":7,"e":"a","a":{"href":"#home","class":"scroll-to-top"}}," ",{"t":7,"e":"div","a":{"class":"row"},"f":[{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"footer-logo-container"},"f":[{"t":7,"e":"div","a":{"class":"logo"}}]}]}," ",{"t":7,"e":"div","a":{"class":"col-md-6 padding-right-footer"},"f":[{"t":7,"e":"div","a":{"class":"contact-details"},"f":[{"t":7,"e":"div","a":{"class":"contact-details-inner"},"f":[{"t":7,"e":"p","a":{"class":"footer-company-name"},"f":["Thornhill Shann Construction Limited"]}," ",{"t":7,"e":"p","f":["61A Greenwood Road, London, E8 1NT"]}," ",{"t":7,"e":"p","f":["Company Number: 10456724"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"mailto:contact@thornhillshann.co.uk"},"f":["contact@thornhillshann.co.uk"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"tel:02036542358"},"f":["0203 654 2358"]}," ",{"t":7,"e":"ul","a":{"class":"social-icons-container"},"f":[{"t":7,"e":"li","a":{"class":"social-icon social-icon--facebook"},"f":[{"t":7,"e":"a","a":{"href":"http://www.instagram.com/","target":"_blank"}}]}," ",{"t":7,"e":"li","a":{"class":"social-icon social-icon--instagram"},"f":[{"t":7,"e":"a","a":{"href":"http://www.facebook.com/","target":"_blank"}}]}," ",{"t":7,"e":"li","a":{"class":"social-icon social-icon--twitter"},"f":[{"t":7,"e":"a","a":{"href":"http://www.facebook.com/","target":"_blank"}}]}," ",{"t":7,"e":"li","a":{"class":"social-icon social-icon--linkedin"},"f":[{"t":7,"e":"a","a":{"href":"http://www.facebook.com/","target":"_blank"}}]}]}]}]}]}]}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"footer section container-fluid","id":"contact"},"f":[{"t":7,"e":"a","a":{"href":"#home","class":"scroll-to-top"}}," ",{"t":7,"e":"div","a":{"class":"row"},"f":[{"t":7,"e":"div","a":{"class":"col-md-6"},"f":[{"t":7,"e":"div","a":{"class":"footer-logo-container"},"f":[{"t":7,"e":"div","a":{"class":"logo"}}]}]}," ",{"t":7,"e":"div","a":{"class":"col-md-6 padding-right-footer"},"f":[{"t":7,"e":"div","a":{"class":"contact-details"},"f":[{"t":7,"e":"div","a":{"class":"contact-details-inner"},"f":[{"t":7,"e":"p","a":{"class":"footer-company-name"},"f":["Thornhill Shann Construction Limited"]}," ",{"t":7,"e":"p","f":["61A Greenwood Road, London, E8 1NT"]}," ",{"t":7,"e":"p","f":["Company Number: 10456724"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"mailto:contact@thornhillshann.co.uk"},"f":["contact@thornhillshann.co.uk"]}," ",{"t":7,"e":"a","a":{"class":"contact-links","href":"tel:02036542358"},"f":["0203 654 2358"]}," ",{"t":7,"e":"ul","a":{"class":"social-icons-container"},"f":[{"t":7,"e":"li","a":{"class":"social-icon social-icon--facebook"},"f":[{"t":7,"e":"a","a":{"href":"http://www.facebook.com/","target":"_blank"}}]}," ",{"t":7,"e":"li","a":{"class":"social-icon social-icon--instagram"},"f":[{"t":7,"e":"a","a":{"href":"http://www.instagram.com/","target":"_blank"}}]}," ",{"t":7,"e":"li","a":{"class":"social-icon social-icon--twitter"},"f":[{"t":7,"e":"a","a":{"href":"http://www.twitter.com/","target":"_blank"}}]}," ",{"t":7,"e":"li","a":{"class":"social-icon social-icon--linkedin"},"f":[{"t":7,"e":"a","a":{"href":"http://www.linkedin.com/","target":"_blank"}}]}]}]}]}]}]}]}]}
 },{}],14:[function(require,module,exports){
 /**
  * @module:   footer
@@ -43888,7 +43888,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":12,"./offer.html":20}],22:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"preload"},"f":[]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"div","a":{"class":"preload"},"f":[{"t":7,"e":"img","a":{"class":"preload__image","src":"../img/nav-logo--white.png","alt":""}}]}]}
 },{}],23:[function(require,module,exports){
 /**
  * @module:   preload
@@ -43906,10 +43906,13 @@ module.exports = Module.extend({
 
   onrender: function() {
       $(window).on('load', function() {
-          $(".preload").addClass("loaded");
+          $(".body").addClass("loaded");
+
+          setTimeout( function(){
+              $('.preload').css('display','none');
+          },2500);
       });
   }
-
 });
 
 },{"../abstract-module":12,"./preload.html":22,"jquery":5}],24:[function(require,module,exports){
@@ -44170,7 +44173,7 @@ module.exports = Module.extend({
 });
 
 },{"../abstract-module":12,"./testimonials.html":28}],30:[function(require,module,exports){
-module.exports={"v":3,"t":[{"t":7,"e":"ui-nav"}," ",{"t":7,"e":"div","a":{"class":"sections-container"},"f":[{"t":7,"e":"ui-home"}," ",{"t":7,"e":"ui-about"}," ",{"t":7,"e":"ui-team"}," ",{"t":7,"e":"ui-projects"}," ",{"t":7,"e":"ui-offer"}," ",{"t":7,"e":"ui-testimonials"}," ",{"t":7,"e":"ui-footer"}]}]}
+module.exports={"v":3,"t":[{"t":7,"e":"ui-preload"}," ",{"t":7,"e":"ui-nav"}," ",{"t":7,"e":"div","a":{"class":"sections-container"},"f":[{"t":7,"e":"ui-home"}," ",{"t":7,"e":"ui-about"}," ",{"t":7,"e":"ui-team"}," ",{"t":7,"e":"ui-projects"}," ",{"t":7,"e":"ui-offer"}," ",{"t":7,"e":"ui-testimonials"}," ",{"t":7,"e":"ui-footer"}]}]}
 },{}],31:[function(require,module,exports){
 var Ractive = require('../module');
 var $ = require("jquery");

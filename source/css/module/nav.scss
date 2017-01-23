@@ -92,7 +92,7 @@
 
     @media #{$viewport-wide-screen}{
         &.nav{
-
+        
         }
 
         .logo{
@@ -109,7 +109,9 @@
         &.nav{
             // height: 100%;
             background-color: transparent;
-            z-index: 3
+            z-index: 3;
+            opacity: 1;
+            font-family: $font-primary !important;
         }
 
         &.active-nav{

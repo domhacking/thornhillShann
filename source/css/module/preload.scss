@@ -6,17 +6,36 @@
 
 
 @include module("preload") {
-	// position: fixed;
-	// left: 0px;
-	// top: 0px;
-	// width: 100%;
-	// height: 100%;
-	// z-index: 9999;
-    // background: red;
-    // opacity: 1;
-    // transition: opacity 2s ease;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+    background: $teal;
+    opacity: 1;
+    transition: opacity 1.5s 1s ease;
 
-    &.loaded{
-        opacity: 0;
-    }
+	.preload__image{
+		height: 250px;
+		width: auto;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+	}
+
+	// &:before{
+	// 	content: '';
+	// 	left: 0%;
+	// 	right: 0%;
+	// 	background-color: $teal;
+	// 	height: 100%;
+	// 	top: 0;
+	// 	position: absolute;
+	// 	transform: scale3d(1, 1, 1);
+	// 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	// 	transition-duration: 3.5s;
+	// }
+
 }

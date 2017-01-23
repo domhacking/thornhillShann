@@ -14,8 +14,11 @@ module.exports = Module.extend({
 
   onrender: function() {
       $(window).on('load', function() {
-          $(".preload").addClass("loaded");
+          $(".body").addClass("loaded");
+
+          setTimeout( function(){
+              $('.preload').css('display','none');
+          },2500);
       });
   }
-
 });

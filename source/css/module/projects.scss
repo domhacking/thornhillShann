@@ -74,6 +74,7 @@
 
     .projectLightBox{
         opacity: 0;
+        display: none;
         transition: opacity 1s 0.2s ease;
     }
 
@@ -101,7 +102,7 @@
     }
 
     .project-image {
-      background-attachment: fixed;
+    //   background-attachment: fixed;
       background-position: center center;
       background-repeat: no-repeat;
       height: 100%;
