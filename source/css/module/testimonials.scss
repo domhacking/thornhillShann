@@ -7,117 +7,211 @@
 
 @include module("testimonials") {
     height: auto;
+    color: $teal !important;
+
+
 
     .section-heading{
         padding-top: 20px;
     }
-    .testimonials-row{
-        height: 33vw;
 
-        &:hover{
-            .testimonials-text-container{
-                // border: solid 3px $white;
-                // transition: 1s border ease;
-            }
-        }
-    }
-
-    .testimonials-parent{
-        height: 100%;
-        padding: 0;
+    .testimonials-container{
+        position: relative;
         overflow: hidden;
     }
 
-    .testimonials-img{
-        height: 200%;
-        position: relative;
-        top: -100%;
-        margin: 0;
+    .testimonials-background{
+        background-image: url('../img/bg-image.jpg');
         background-size: cover;
-        background-position: center;
-
-        &--chelsea{
-            background-image: url('../img/bg-kitchen.jpg');
-        }
-
-        &--hackney{
-            background-image: url('../img/bg-kitchenAndSittingRoom.jpg');
-        }
-    }
-
-    .testimonials-text-wrapper{
-        background-color: $light-teal;
+        background-position: top;
+        filter: blur(3px);
+        display: block;
+        -webkit-filter: blur(3px);
         height: 100%;
-        text-align: center;
-        position: relative;
-        padding: 30px;
-
-
-    }
-
-    .testimonials-text-container{
-        position: relative;
-        // transition: 1s opacity ease;
-        height: 100%;
-        border: solid 3px $white;
-    }
-
-    .testimonials-text-content{
+        overflow: hidden;
+        left: 0;
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        right: 0;
+        z-index: 1;
     }
 
-    .testimonials-title{
-        font-weight: normal;
-        margin-bottom: 20px;
+    .testimonialsCarousel{
+        z-index: 2;
+        padding: 100px 40px 80px;
+        width: 80%;
+        max-width: 1250px;
+        margin: 0 auto;
     }
 
-    .testimonials-quote{
-        font-style: italic;
-        line-height: 2;
+    .testimonial{
+        text-align: center;
+        vertical-align: middle;
+
+
+        &__heading{
+            font-weight: bold;
+            letter-spacing: 6px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 20px
+        }
+
+        &__quote{
+            margin-bottom: 20px;
+        }
+
+        &__source{
+            font-weight: bold;
+            font-size: 13px;
+        }
     }
 
-    @media #{$viewport-tablet}{
-        #parallax2{
-            display: none;
-        }
-
-
-        .testimonials-row{
-            height: auto;
-        }
-
-        .testimonials-text-container{
-            height: auto;
-            display: block;
-        }
-
-        .testimonials-text-content{
-            position: relative;
-            height: auto;
-            display: block;
-            top: auto;
-            left: auto;
-            transform: none;
-            padding: 20px 50px;
-        }
-
-        .testimonials-img{
-            height: 50vw;
-            transform: none !important;
-            // display: none;
-        }
-
+    .testimonial-container{
+        max-width: 900px;
+        margin: 0 auto;
     }
 
-    @media #{$viewport-tablet}{
-        .testimonials-text-content{
-            padding: 20px 10px;
-        }
+    .slick-track{}
 
-
-
+    .slick-slider{
+        margin-bottom: 0;
     }
+
+    .slick-arrow{
+        height: 45px;
+        z-index: 2;
+        width: 45px;
+        background: url('../img/footer-up-arrow.png');
+        opacity: 1;
+        background-size: contain;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.7;
+            transition: 0.3s opacity ease;
+        }
+    }
+
+    .slick-next{
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    .slick-prev{
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        z-index: 2;
+    }
+
+
+
+    // .testimonials-row{
+    //     height: 33vw;
+    //
+    //     &:hover{
+    //         .testimonials-text-container{
+    //             // border: solid 3px $white;
+    //             // transition: 1s border ease;
+    //         }
+    //     }
+    // }
+    //
+    // .testimonials-parent{
+    //     height: 100%;
+    //     padding: 0;
+    //     overflow: hidden;
+    // }
+    //
+    // .testimonials-img{
+    //     height: 200%;
+    //     position: relative;
+    //     top: -100%;
+    //     margin: 0;
+    //     background-size: cover;
+    //     background-position: center;
+    //
+    //     &--chelsea{
+    //         background-image: url('../img/bg-kitchen.jpg');
+    //     }
+    //
+    //     &--hackney{
+    //         background-image: url('../img/bg-kitchenAndSittingRoom.jpg');
+    //     }
+    // }
+    //
+    // .testimonials-text-wrapper{
+    //     background-color: $light-teal;
+    //     height: 100%;
+    //     text-align: center;
+    //     position: relative;
+    //     padding: 30px;
+    //
+    //
+    // }
+    //
+    // .testimonials-text-container{
+    //     position: relative;
+    //     // transition: 1s opacity ease;
+    //     height: 100%;
+    //     border: solid 3px $white;
+    // }
+    //
+    // .testimonials-text-content{
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    // }
+    //
+    // .testimonials-title{
+    //     font-weight: normal;
+    //     margin-bottom: 20px;
+    // }
+    //
+    // .testimonials-quote{
+    //     font-style: italic;
+    //     line-height: 2;
+    // }
+    //
+    // @media #{$viewport-tablet}{
+    //     #parallax2{
+    //         display: none;
+    //     }
+    //
+    //
+    //     .testimonials-row{
+    //         height: auto;
+    //     }
+    //
+    //     .testimonials-text-container{
+    //         height: auto;
+    //         display: block;
+    //     }
+    //
+    //     .testimonials-text-content{
+    //         position: relative;
+    //         height: auto;
+    //         display: block;
+    //         top: auto;
+    //         left: auto;
+    //         transform: none;
+    //         padding: 20px 50px;
+    //     }
+    //
+    //     .testimonials-img{
+    //         height: 50vw;
+    //         transform: none !important;
+    //         // display: none;
+    //     }
+    //
+    // }
+    //
+    // @media #{$viewport-tablet}{
+    //     .testimonials-text-content{
+    //         padding: 20px 10px;
+    //     }
+    //
+    //
+    //
+    // }
 }

@@ -25,17 +25,17 @@
         // background-position: center;
 
         &--chelsea{
-            background-image: url('../img/project-bg-chelsea.jpg');
+            background-image: url('../img/nevern-hero.jpg');
 
         }
 
         &--hackney{
-            background-image: url('../img/project-bg-kensington.jpg');
+            background-image: url('../img/hackney-hero.jpg');
 
         }
 
         &--brookGreen{
-            background-image: url('../img/project-bg-fulham.jpg');
+            background-image: url('../img/netherwood-hero.jpg');
         }
 
         &:hover{
@@ -44,6 +44,10 @@
             .project-content-wrapper{
                 transition: background-color 0.3s ease;
                 background-color: rgba(255,255,255, 0.6);
+            }
+
+            .project__name, .project__location{
+                color: $teal;
             }
         }
 
@@ -63,12 +67,14 @@
     }
 
     .project__name{
+        color: $white;
         font-size: 24px;
         text-transform: uppercase;
         letter-spacing: 6px;
     }
 
     .project__location{
+        color: $white;
         font-style: italic;
     }
 
@@ -105,6 +111,7 @@
     //   background-attachment: fixed;
       background-position: center center;
       background-repeat: no-repeat;
+      background-size: cover;
       height: 100%;
       width: 100%;
       border-top: 1px solid $teal;
@@ -239,6 +246,7 @@
 
     .slick-next{
         right: 25px;
+
         // color: black;
 
         // &:before{

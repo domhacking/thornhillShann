@@ -34,13 +34,13 @@ module.exports = function() {
 			.setTween("#parallax1 > div", {y: "80%"})
 			.addTo(controller);
 
-        new ScrollMagic.Scene({triggerElement: "#parallax2"})
-			.setTween("#parallax2 > div", {y: "60%"})
-			.addTo(controller);
-
-	    new ScrollMagic.Scene({triggerElement: "#parallax3"})
-			.setTween("#parallax3 > div", {y: "60%"})
-			.addTo(controller);
+        // new ScrollMagic.Scene({triggerElement: "#parallax2"})
+		// 	.setTween("#parallax2 > div", {y: "60%"})
+		// 	.addTo(controller);
+        //
+	    // new ScrollMagic.Scene({triggerElement: "#parallax3"})
+		// 	.setTween("#parallax3 > div", {y: "60%"})
+		// 	.addTo(controller);
 
 
     },

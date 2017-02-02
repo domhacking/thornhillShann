@@ -8,17 +8,20 @@
  team = [
      {
          name: "Thomas Shann",
+         imgName: "tommy",
          position: "Co Founder",
          description: "Tom brings programming, client communication, and an eye for detail to create an immaculate finish combined with a fantastic team of highly skilled and reliable tradesmen."
      },
      {
          name: "Skender Perpepa",
+         imgName: "skender",
          position: "Co Founder",
          description: "Skender brings a lifetime of experience in running a successful construction company with a team of forty hard working, loyal and talented builders."
      },
      {
          name: "Billy sinclair",
-         position: "Director",
+         imgName: "billy",
+         position: "Designer",
          description: "Billy has worked in architecture for almost a decade, having graduated with a distinction from the Welsh School of Architecture he has consulted on numerous high profile projects and joins Thornhill Shann in the role of Director"
      },
     //  {

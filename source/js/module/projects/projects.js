@@ -7,7 +7,7 @@
 
 var Module = require('../abstract-module');
 var $ = require('jquery');
-var fullpage = require('fullpage.js');
+// var fullpage = require('fullpage.js');
 var slick = require('slick-carousel-browserify');
 
 module.exports = Module.extend({
@@ -17,15 +17,16 @@ module.exports = Module.extend({
     data: {
         projects: [
             {
-                location:"Name Road",
+                location:"Netherwood Road",
                 class:"brookGreen",
                 name: "Brook Green",
-                imageHero:"../img/bg-sittingRoom.jpg",
+                imageHero:"../img/netherwood-hero.jpg",
                 imageNumber:"1",
-                images: ["../img/bg-sittingRoom.jpg", "../img/bg-kitchenAndSittingRoom.jpg", "../img/bg-kitchenAndSittingRoom2.jpg"],
+                images: ["../img/netherwood-1.jpg", "../img/netherwood-2.jpg", "../img/netherwood-3.jpg", "../img/netherwood-4.jpg"],
                 client: "Private",
                 architect : "Delta Architects",
-                structural : "Elliot Wood",
+                type: "Refurbishment and extension",
+                sqft: "900 sq ft",
                 price : "£120k",
                 features : ["New kitchen extension", "Structural Alterations", "Extensive Refurbishment", "2 x new bathrooms", "New M&E system  through", "Hard and soft landscaping", "New Joinery", "Bifold doors and roof lantern "],
                 description: "Thornhill Shann completed a £220,000 project in Brook Green, working in collaboration with Delta Architects and structural engineers Elliott Wood. The build included structural alterations and extensive renovations such as creating two new bathrooms and a new kitchen extension, installation of bifold doors and a roof lantern as well as new joinery, a new M&E system throughout, in addition to both hard and soft landscaping."
@@ -36,25 +37,27 @@ module.exports = Module.extend({
                 name: "Hackney",
                 imageHero:"../img/bg-sittingRoom.jpg",
                 imageNumber:"1",
-                images: ["../img/bg-sittingRoom.jpg", "../img/bg-kitchenAndSittingRoom.jpg", "../img/bg-kitchenAndSittingRoom2.jpg"],
+                images: ["../img/hackney-1.jpg", "../img/hackney-2.jpg", "../img/hackney-3.jpg"],
                 client: "Private",
-                architect : "Delta Architects",
-                structural : "Elliot Wood",
+                architect : "CL4 Architecture",
+                type: "Refurbishment and extension",
+                sqft: "900 sq ft",
                 price : "£120k",
-                features : ["New kitchen extension", "Structural Alterations", "Extensive Refurbishment", "2 x new bathrooms", "New M&E system  through", "Hard and soft landscaping", "New Joinery", "Bifold doors and roof lantern "],
+                features : ["Total refurbishment of a very out dated property", "Internal layout of the house redesigned", "Structural alterations using 10 new steel beams.", "2 x new bathrooms", "New Kitchen", "New wooden flooring throughout", "Garden re-landscaped", "Front of house renovated, including front garden", "New M&E System throughout"],
                 description: "Thornhill Shann completed a £250,000 project in Hackney, working closely with 1903 Planning Ltd. The build included structural alterations and extensive renovations such as creating two new bathrooms and installing a new kitchen, as well as new joinery, in addition to both hard and soft landscaping."
             },
             {
-                location:"Name Road",
+                location:"Nevern Square",
                 name: "Chelsea",
                 class:"chelsea",
-                imageHero:"../img/bg-sittingRoom.jpg",
+                imageHero:"../img/nevern-hero.jpg",
                 imageNumber:"1",
-                images: ["../img/bg-sittingRoom.jpg", "../img/bg-kitchenAndSittingRoom.jpg", "../img/bg-kitchenAndSittingRoom2.jpg"],
+                images: ["../img/nevern-1.jpg", "../img/nevern-2.jpg", "../img/nevern-3.jpg", "../img/nevern-4.jpg"],
                 client: "Private",
                 architect : "Delta Architects",
-                structural : "Elliot Wood",
-                price : "£120k",
+                type: "Refurbishment and extension",
+                sqft: "2000 sq ft",
+                price : "£220k",
                 features : ["New kitchen extension", "Structural Alterations", "Extensive Refurbishment", "2 x new bathrooms", "New M&E system  through", "Hard and soft landscaping", "New Joinery", "Bifold doors and roof lantern "],
                 description: "Thornhill Shann completed a £360,000 project in Chelsea, working closely with SR Davis Architects, Baynham Meikle structural engineers and ECOLED lighting designers. The build included extensive renovations such as creating three new bathrooms, adding a sunroom extension and installing a new kitchen, as well as new joinery, in addition to both hard and soft landscaping."
             }
@@ -80,8 +83,6 @@ module.exports = Module.extend({
 
         var closeButton = document.querySelector('.close-popup');
         var bodyButton = document.querySelector('.body');
-        console.log(bodyButton);
-
 
         // $('.project').click(function () {
             // $(this).toggle('lightboxActive');
@@ -121,6 +122,7 @@ module.exports = Module.extend({
 
     oninit: function(){
         this.on('projectClick', this.onProjectClick);
+        this.on('infoClick', this.onInformation);
     },
 
 
@@ -141,14 +143,15 @@ module.exports = Module.extend({
 
     onInformation: function(){
         var popupPanel = document.querySelector('.popup__panel');
-        // console.log(popupPanel);
+        console.log(popupPanel);
         popupPanel.classList.toggle('activate-panel');
 
     },
 
     onProjectClick:function(){
+        console.log('ello');
         // this.set('lightboxActive', true);
-        console.log(body);
+        this.set('lightbox')
     },
 
 

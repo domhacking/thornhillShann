@@ -8,8 +8,30 @@
 // Read more avaiable properties:
 // https://github.com/inuitcss/base.headings/blob/master/_base.headings.scss
 ///////////////////////////////////////////////////////////////////////////////
+
+
 $font-primary: "Myriad Pro", serif;
 $font-secondary: Georgia, serif;
 
+$heading-font: "Gotham Bold";
+$content-font: "Gotham Light";
+
 $font-size: 16px;
 $font-line-height: 24px;
+
+
+@font-face {
+  font-family: $heading-font;
+  // font-family: "GothamBold";
+  src: url("../fonts/GothamBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $content-font;
+  // font-family: "GothamBold";
+  src: url("../fonts/GothamLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -39,7 +39,8 @@
     }
 
     .nav-item{
-        font-family: $font-primary;
+        font-family: $content-font;
+        font-weight: bold;
         display: inline-block;
         list-style: none;
         padding: 25px 23px 20px;
@@ -92,7 +93,7 @@
 
     @media #{$viewport-wide-screen}{
         &.nav{
-        
+
         }
 
         .logo{
@@ -111,7 +112,7 @@
             background-color: transparent;
             z-index: 3;
             opacity: 1;
-            font-family: $font-primary !important;
+            // font-family: $font-primary !important;
         }
 
         &.active-nav{

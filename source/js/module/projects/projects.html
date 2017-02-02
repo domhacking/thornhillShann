@@ -8,7 +8,7 @@
     <h2 class="section-heading">Projects</h2>
     <div class="projectsCarousel">
         {{#each projects:i}}
-            <div class="project project--{{class}}">
+            <div class="project project--{{class}}" on-click="projectClick">
                 <div class="project-content-wrapper">
                     <div class="project-content-container">
                         <h3 class="project__name">{{name}}</h3>
@@ -35,8 +35,8 @@
                                 </div><!--
                              --><div class="popup__content-container">
                                     <div class="popup__content">{{client}}</div>
-                                    <div class="popup__content">{{architect}}</div>
-                                    <div class="popup__content">{{structural}}</div>
+                                    <div class="popup__content">{{type}}</div>
+                                    <div class="popup__content">{{sqft}}</div>
                                     <div class="popup__content">{{price}}</div>
                                     <ul class="popup__content popup__content--list-container">
                                         {{#each features}}
