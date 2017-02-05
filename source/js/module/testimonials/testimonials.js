@@ -42,12 +42,6 @@ module.exports = Module.extend({
           autoplay: true,
           autoplaySpeed: 10000,
           arrows: true,
-          responsive: [
-              {
-                breakpoint: 530,
-                settings: 'unslick'
-              },
-            ]
       });
 
   }

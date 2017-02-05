@@ -16,13 +16,14 @@
                     </div>
                 </div>
                 <div class="projectLightBox">
-                    <div class="close-popup">X</div>
+                    <div class="close-popup" on-click="closeProject">X</div>
                     <div class="popup-hover-area">
-                        <div class="info-icon" on-click="information">i</div>
+                        <div class="info-icon" on-click="infoClick">i</div>
                         <div class="popup__panel">
                             <div class="popup__content-wrapper">
                                 <div class="popup__location">{{location}}</div>
                                 <div class="popup__name">{{name}}</div>
+                                <div class="close-mob-pan" on-click="closeInformation">close [x]</div>
 
                                 <hr class="gold-line">
 
@@ -31,14 +32,14 @@
                                     <p class="popup__sub-heading">Project Type:</p>
                                     <p class="popup__sub-heading">Sq ft:</p>
                                     <p class="popup__sub-heading">Project Value:</p>
-                                    <p class="popup__sub-heading">Services:</p>
+                                    <p class="popup__sub-heading popup__sub-heading--services">Services:</p>
                                 </div><!--
                              --><div class="popup__content-container">
                                     <div class="popup__content">{{client}}</div>
                                     <div class="popup__content">{{type}}</div>
                                     <div class="popup__content">{{sqft}}</div>
                                     <div class="popup__content">{{price}}</div>
-                                    <ul class="popup__content popup__content--list-container">
+                                    <ul class="popup__content--list-container">
                                         {{#each features}}
                                         <li class="popup__content popup__content--list-item">{{this}}</li>
                                         {{/each}}
@@ -53,6 +54,11 @@
                     </div>
 
                     <div class="project-images-container">
+                        <div class="heading-container">
+                            <h2 class="project-name">{{name}}</h2>
+                            <p class="project-name">{{location}}</p>
+                        </div>
+
                         {{#each images:i}}
                             <div class="project-image project-image{{i}}" style="background-image:url({{this}})"></div>
                         {{/each}}

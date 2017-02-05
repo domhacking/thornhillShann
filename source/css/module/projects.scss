@@ -50,7 +50,6 @@
                 color: $teal;
             }
         }
-
     }
 
     .project-content-wrapper{
@@ -107,6 +106,31 @@
         width: 100%;
     }
 
+    .heading-container{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-transform: uppercase;
+        margin-top: 20px;
+        letter-spacing: 6px;
+        color: white;
+    }
+
+    // .project--hackney{
+    //     .heading-container{
+    //     }
+    // }
+    // .project--chelsea{
+    //     .heading-container{
+    //         color: white;
+    //     }
+    // }
+    // .project--brookGreen{
+    //     .heading-container{
+    //         color: white;
+    //     }
+    // }
+
     .project-image {
     //   background-attachment: fixed;
       background-position: center center;
@@ -129,11 +153,13 @@
         text-transform: uppercase;
     }
 
+
+    // INFO POP UP PANEL
     .info-icon{
         position: fixed;
         left: 0px;
         top: 80px;
-        z-index: 20;
+        z-index: 200;
         background-color: $teal;
         color: $white;
         opacity: 1;
@@ -141,7 +167,10 @@
         font-size: 30px;
         font-weight: bold;
         padding: 5px 20px;
+    }
 
+    .close-mob-pan{
+        display: none;
     }
 
     .popup-hover-area{
@@ -152,6 +181,7 @@
         min-width: 600px;
         position: fixed;
         z-index: 10;
+
 
         &:hover{
             .popup__panel{
@@ -246,27 +276,67 @@
 
     .slick-next{
         right: 25px;
-
-        // color: black;
-
-        // &:before{
-        //     content: "next"
-        // }
     }
 
     .slick-prev{
         left: 25px;
-        z-index: 2;
-        // color: black;
-
-        // &:after{
-        //     content: "prev"
-        // }
     }
 
     @media #{$viewport-tablet}{
+        .popup__content-wrapper{
+            background-color: $teal;
+        }
+
+        .popup-hover-area{
+            overflow-y: scroll;
+            width: 100%;
+            min-width: auto;
+        }
+
+        .close-mob-pan{
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    }
+
+    @media #{$viewport-mobile}{
+        .project{
+            height: 50vw;
+        }
 
 
+        .activate-panel{
+            &.popup__panel{
+                left: 0%;
+                transition: all 1s ease;
+            }
+
+            .info-icon{
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+        }
+
+
+        .popup__content--list-container{
+            margin: 0 0 0 15px;
+        }
+
+        .heading-container{
+            width: 100%;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .popup__content--list-container, .popup__sub-heading--services{
+            display: none !important;
+        }
+
+        .popup__name, .popup__location{
+            width: 70%;
+        }
 
     }
 
