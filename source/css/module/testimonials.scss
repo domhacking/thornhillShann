@@ -110,7 +110,7 @@
     @media #{$viewport-tablet}{
         .testimonials-background{
             background-repeat: no-repeat;
-            background-size: 200% 100%;
+            background-size: 300% auto;
         }
     }
     @media #{$viewport-mobile}{

@@ -91,11 +91,6 @@ module.exports = Module.extend({
                 });
             })(i);
         }
-
-        // if (!("ontouchstart" in document.documentElement)) {
-        //     document.documentElement.className += " no-touch";
-        // }
-
     },
 
     oninit: function(){
@@ -114,12 +109,10 @@ module.exports = Module.extend({
 
     onCloseInformation: function(){
         setTimeout(function(){
-            // var popupPanel = document.querySelector('.popup__panel');
             $('.lightboxActive .popup__panel').removeClass('activate-panel');
-            // $('.popup__panel').css({'left', '-100%'});
-            // popupPanel.style.left = "-100%";
+            console.log('clicked close');
+            // window.srollTo
         }, 0);
-        console.log('clicked close');
         var closeButton = document.querySelector('.close-popup');
         closeButton.style.display = "block";
     },
@@ -132,20 +125,28 @@ module.exports = Module.extend({
             bodyButton.classList.remove('noScroll');
         }, 0)
     }
+
+//     $('.scroll_item').on('click', function() {
+//     var elem   = $('#' + $(this).data('page')),
+//         scroll = elem.offset().top;
+//
+//     $('body, html').animate({scrollTop : scroll}, 1000);
+//
+//     $(this).addClass('scroll_item_active')
+//            .siblings('.scroll_item_active')
+//            .removeClass('scroll_item_active');
+// });
+//
+// $(window).on('scroll', function(e) {
+//     var elems    = $('#first, #second, #third, #fourth'),
+//         scrolled = $(this).scrollTop();
+//
+//     var dataPage = elems.filter(function() {
+//         return $(this).offset().top + ($(this).height() / 2) >= scrolled;
+//     }).first();
+//
+//     $('.scroll_item[data-page="'+dataPage.prop('id')+'"]').addClass('scroll_item_active')
+//                      .siblings('.scroll_item_active')
+//                      .removeClass('scroll_item_active');
+// }).trigger('scroll');
 });
-
-
-// scrollMagicActivation: function(){
-//     var slides = document.querySelectorAll("project-image");
-//
-//
-//     // create scene for every slide
-//     for (var i=0; i<slides.length; i++) {
-//         console.log(slides);
-//         new ScrollMagic.Scene({
-//             triggerElement: slides[i]
-//         })
-//         .setPin(slides[i])
-//         .addTo(scrollMagicController);
-//     }
-// },

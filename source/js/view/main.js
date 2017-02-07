@@ -42,6 +42,11 @@ module.exports = function() {
 		// 	.setTween("#parallax3 > div", {y: "60%"})
 		// 	.addTo(controller);
 
+        // if (!('ontouchstart' in document.documentElement)
+        //     && !navigator.MaxTouchPoints
+        //     && !navigator.msMaxTouchPoints) {
+        //     document.body.className += ' notouch';
+        // }
         var touch = 'ontouchstart' in document.documentElement
             || (navigator.MaxTouchPoints > 0)
             || (navigator.msMaxTouchPoints > 0);

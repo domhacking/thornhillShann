@@ -22,7 +22,7 @@
          name: "Billy sinclair",
          imgName: "billy",
          position: "Designer",
-         description: "Billy has worked in architecture for almost a decade, having graduated with a distinction from the Welsh School of Architecture he has consulted on numerous high profile projects and joins Thornhill Shann in the role of Director"
+         description: "Billy has worked in architecture for almost a decade, having graduated with a distinction from the Welsh School of Architecture he has consulted on numerous high profile projects and joins Thornhill Shann in the role of lead designer"
      },
     //  {
     //      name: "Tommy Shann",

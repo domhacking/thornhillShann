@@ -17,6 +17,7 @@
                 </div>
                 <div class="projectLightBox">
                     <div class="close-popup" on-click="closeProject">X</div>
+
                     <div class="popup-hover-area">
                         <div class="info-icon" on-click="infoClick">i</div>
                         <div class="popup__panel">
@@ -54,13 +55,19 @@
                     </div>
 
                     <div class="project-images-container">
+                        <div class="ticker-container">
+                            {{#each images:i}}
+                                <div data-page={{i}} class="ticket-dot">{{i}}</div>
+                            {{/each}}
+                        </div>
+
                         <div class="heading-container">
                             <h2 class="project-name">{{name}}</h2>
                             <p class="project-name">{{location}}</p>
                         </div>
 
                         {{#each images:i}}
-                            <div class="project-image project-image{{i}}" style="background-image:url({{this}})"></div>
+                            <div data-page="{{i}}" class="project-image project-image{{i}}" style="background-image:url({{this}})"></div>
                         {{/each}}
                     </div>
                 </div>

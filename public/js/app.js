@@ -40966,10 +40966,10 @@ module.exports = Module.extend({
         setTimeout(function(){
             // var popupPanel = document.querySelector('.popup__panel');
             $('.lightboxActive .popup__panel').removeClass('activate-panel');
+            console.log('clicked close');
             // $('.popup__panel').css({'left', '-100%'});
             // popupPanel.style.left = "-100%";
         }, 0);
-        console.log('clicked close');
         var closeButton = document.querySelector('.close-popup');
         closeButton.style.display = "block";
     },
@@ -41149,6 +41149,11 @@ module.exports = function() {
 		// 	.setTween("#parallax3 > div", {y: "60%"})
 		// 	.addTo(controller);
 
+        // if (!('ontouchstart' in document.documentElement)
+        //     && !navigator.MaxTouchPoints
+        //     && !navigator.msMaxTouchPoints) {
+        //     document.body.className += ' notouch';
+        // }
         var touch = 'ontouchstart' in document.documentElement
             || (navigator.MaxTouchPoints > 0)
             || (navigator.msMaxTouchPoints > 0);

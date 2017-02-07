@@ -5745,7 +5745,8 @@ button.close {
   font-style: normal; }
 
 .noScroll {
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%; }
 
 .sections-container {
   height: 100%; }
@@ -6746,6 +6747,7 @@ div, p {
   .about .parallax--about {
     background-image: url("../img/netherwood-4.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     height: 200%;
     position: relative;
@@ -6853,16 +6855,16 @@ div, p {
   background-size: cover;
   background-position: center; }
   .home .logo {
-    background-image: url("../img/ts-logo--white.png");
+    background-image: url("../img/TS_Shadowed-02.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    height: 50%;
+    height: 60%;
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     margin: 20px;
     position: absolute;
-    top: 52%;
+    top: 50%;
     left: 50%;
     opacity: 0;
     -ms-transform: translate(-50%, -50%);
@@ -6953,7 +6955,7 @@ div, p {
       height: 85px; }
     .nav .nav-item {
       padding: 35px 23px; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 980px) {
     .nav.nav {
       background-color: transparent;
       z-index: 3;
@@ -7173,6 +7175,7 @@ div, p {
     transition: opacity 1s 0.2s ease; }
   .projects .lightboxActive .projectLightBox {
     position: fixed !important;
+    background-color: #4A606D;
     width: 100%;
     height: 100%;
     top: 0 !important;
@@ -7194,6 +7197,8 @@ div, p {
     margin-top: 20px;
     letter-spacing: 6px;
     color: white; }
+  .projects .project--brookGreen .heading-container {
+    color: #4A606D; }
   .projects .project-image {
     background-position: center center;
     background-repeat: no-repeat;
@@ -7211,6 +7216,9 @@ div, p {
     color: white;
     cursor: pointer;
     text-transform: uppercase; }
+    .projects .close-popup:hover {
+      color: #4A606D;
+      transition: color 0.3s ease; }
   .projects .info-icon {
     position: fixed;
     left: 0px;
@@ -7251,6 +7259,7 @@ div, p {
     height: 100%;
     left: -100%;
     transition: all 1s ease;
+    overflow-y: scroll;
     z-index: 5; }
   .projects .popup__content-wrapper {
     padding: 20px; }
@@ -7292,10 +7301,6 @@ div, p {
   @media screen and (max-width: 1100px) {
     .projects .popup__content-wrapper {
       background-color: #4A606D; }
-    .projects .popup-hover-area {
-      overflow-y: scroll;
-      width: 100%;
-      min-width: auto; }
     .projects .close-mob-pan {
       display: block;
       position: absolute;
@@ -7303,19 +7308,31 @@ div, p {
       right: 20px; } }
   @media screen and (max-width: 768px) {
     .projects .project {
-      height: 50vw; }
+      height: 33vw; }
+    .projects .popup-hover-area {
+      overflow-y: scroll;
+      width: 100%;
+      min-width: auto; }
     .projects .activate-panel.popup__panel {
       left: 0%;
       transition: all 1s ease; }
     .projects .activate-panel .info-icon {
       opacity: 0;
       transition: opacity 0.3s ease; }
+    .projects .project-image {
+      height: 50%; }
     .projects .popup__content--list-container {
       margin: 0 0 0 15px; }
     .projects .heading-container {
       width: 100%;
       padding: 0 20px;
       text-align: center; }
+      .projects .heading-container h2, .projects .heading-container p {
+        font-size: 1em !important; }
+    .projects .close-popup {
+      right: 15px;
+      top: 15px;
+      font-size: 20px; }
     .projects .popup__content--list-container, .projects .popup__sub-heading--services {
       display: none !important; }
     .projects .popup__name, .projects .popup__location {
@@ -7453,7 +7470,7 @@ div, p {
   @media screen and (max-width: 1100px) {
     .testimonials .testimonials-background {
       background-repeat: no-repeat;
-      background-size: 200% 100%; } }
+      background-size: 300% auto; } }
   @media screen and (max-width: 768px) {
     .testimonials .testimonials-background {
       background-repeat: no-repeat;
