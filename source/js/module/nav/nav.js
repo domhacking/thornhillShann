@@ -15,29 +15,31 @@ module.exports = Module.extend({
 
     template: require('./nav.html'),
 
-    data: {
-        nav : [
-            {
-                navItem: "about",
-                dataAnchor: "about"
-            },
-            {
-                navItem: "projects",
-                dataAnchor: "projects"
-            },
-            {
-                navItem: "what we offer",
-                dataAnchor: "offer"
-            },
-            {
-                navItem: "testimonials",
-                dataAnchor: "testimonials"
-            },
-            {
-                navItem: "contact",
-                dataAnchor: "contact"
-            }
-        ]
+    data: function () {
+        return {
+            nav : [
+                {
+                    navItem: "about",
+                    dataAnchor: "about"
+                },
+                {
+                    navItem: "projects",
+                    dataAnchor: "projects"
+                },
+                {
+                    navItem: "what we offer",
+                    dataAnchor: "offer"
+                },
+                {
+                    navItem: "testimonials",
+                    dataAnchor: "testimonials"
+                },
+                {
+                    navItem: "contact",
+                    dataAnchor: "contact"
+                }
+            ]
+        }
     },
 
     oninit: function(){

@@ -188,20 +188,6 @@
         position: fixed;
         z-index: 10;
 
-
-        // .no-touch & {
-            &:hover{
-                .popup__panel{
-                    left: 0%;
-                    transition: all 1s ease;
-                }
-
-                .info-icon{
-                    opacity: 0;
-                    transition: opacity 0.3s ease;
-                }
-            }
-        // }
     }
 
     .gold-line{

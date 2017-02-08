@@ -46,6 +46,22 @@ $inuit-base-background-color : $color-background;
     margin: 10px auto 20px;
 }
 
+// .no-touch{
+//     .popup-hover-area{
+//         &:hover{
+//             .popup__panel{
+//                 left: 0%;
+//                 transition: all 1s ease;
+//             }
+//
+//             .info-icon{
+//                 opacity: 0;
+//                 transition: opacity 0.3s ease;
+//             }
+//         }
+//     }
+// }
+
 @media #{$viewport-mobile}{
     .section-heading{
         font-size: 24px;

@@ -38,8 +38,10 @@ module.exports = Module.extend({
 
   template: require('./team.html'),
 
-  data: {
-      team : team
+  data: function () {
+      return {
+          team : team
+      }
   }
 
 });
