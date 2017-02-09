@@ -9,8 +9,6 @@
     height: auto;
     color: $teal !important;
 
-
-
     .section-heading{
         padding-top: 20px;
     }
@@ -69,6 +67,10 @@
     .testimonial-container{
         max-width: 900px;
         margin: 0 auto;
+        display: table;
+        // position: absolute;
+        // top: 50%;
+        // transform: translateY(-50%);
     }
 
     .slick-track{}

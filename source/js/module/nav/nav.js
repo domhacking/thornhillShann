@@ -56,9 +56,19 @@ module.exports = Module.extend({
 
             if( target.length ) {
                 event.preventDefault();
-                $('html, body').stop().animate({
-                    scrollTop: target.offset().top - navHeight
-                }, 1000);
+                //
+                // if( this.getAttribute('href') === "#contact"){
+                //     $('html, body').stop().animate({
+                //         scrollTop: $(document).height()
+                //     }, 1000);
+                //     return false;
+                // } else {
+                console.log(target.offset().top);
+                console.log(window.innerHeight);
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - navHeight
+                    }, 1000);
+                // }
             }
         });
 

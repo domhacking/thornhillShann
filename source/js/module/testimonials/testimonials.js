@@ -41,11 +41,15 @@ module.exports = Module.extend({
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-          autoplay: true,
+          autoplay: false,
+          swipe: true,
+        //   adaptiveHeight: true,
           autoplaySpeed: 10000,
           arrows: true,
       });
 
+      var carouselHeight = $('.testimonialsCarousel').height();
+      console.log(carouselHeight);
   }
 
 });
